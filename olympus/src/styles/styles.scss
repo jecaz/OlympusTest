@@ -1,0 +1,27 @@
+@import "~bootstrap/scss/bootstrap";
+@import './reset';
+
+$signup-layout-bg-color: rgba(247, 106, 63, 0.9);
+$signup-layout-font-color: #ffffff;
+
+.background {
+  background:url('../assets/images/users-bg.png') repeat;
+  position: relative;
+  height: 100vh;
+}
+
+.layer {
+  background-color: $signup-layout-bg-color;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.proba {
+  height: 100vh;
+  width: 50%;
+  color: $signup-layout-font-color
+}
+
