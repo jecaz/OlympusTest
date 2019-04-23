@@ -1,0 +1,23 @@
+@import '../../../node_modules/bootstrap/scss/_functions';
+@import '../../../node_modules/bootstrap/scss/_variables';
+
+// General
+$primary-color: $white;
+$secondary-color: $black;
+$border-color: $gray-200;
+$red-color: #F94F4F;
+
+// Checkbox
+$checkbox-bg-color: $white;
+$checkbox-border-color: $gray-200;
+
+$layout-bg-color: rgba(247, 106, 63, 0.9);
+$layout-bg-color-hover: rgba(247, 106, 63, 0.5);
+$layout-font-color-primary: #ffffff;
+
+$breakpoints: (
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px
+);
