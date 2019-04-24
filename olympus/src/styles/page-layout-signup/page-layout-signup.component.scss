@@ -19,8 +19,8 @@
 }
 
 .layout-container {
-  margin-top: 30px;
-  width: 70%;
+  margin: 30px auto 0 auto;
+  width: 60%;
 }
 
 .layout-header {
@@ -72,5 +72,15 @@
     &:hover {
       @include hover-state(.4, $secondary-color, 220ms);
     }
+  }
+}
+
+@include responsive-below(lg) {
+  .layout-container {
+    width: 98%;
+  }
+
+  .layout-header--logo--link {
+    margin-left: .4rem;
   }
 }
