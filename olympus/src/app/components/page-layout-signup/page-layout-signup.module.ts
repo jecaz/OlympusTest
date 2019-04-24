@@ -3,6 +3,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
 import {PageLayoutSignupComponent} from './page-layout-signup.component';
 import {RegisterModule} from './register/register.module';
+import {LoginModule} from './login/login.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import {RegisterModule} from './register/register.module';
   imports: [
     BrowserModule,
     RouterModule,
-    RegisterModule
+    RegisterModule,
+    LoginModule
   ],
   providers: [],
   exports: [PageLayoutSignupComponent]
