@@ -1,4 +1,3 @@
-
 @import "../shared-styles/variables";
 @import "../shared-styles/mixins";
 
@@ -75,6 +74,53 @@
   }
 }
 
+.layout-content {
+  display: flex;
+  justify-content: space-between;
+
+  &--introduction {
+    margin-right: 1rem;
+    width: 60%;
+    align-self: center;
+    color: $primary-color;
+
+    &--title {
+      @include font-style(1.5rem, 'Roboto');
+      margin-bottom: 2rem;
+      line-height: 1.3;
+    }
+
+    &--description {
+      margin-bottom: 2rem;
+      line-height: 1.5;
+      font-size: 0.8rem;
+    }
+
+    &--button {
+      padding: 8px 30px;
+      background-color: transparent;
+      border: 2px solid $primary-color;
+      border-radius: 3px;
+      outline: none;
+
+      &:hover {
+        border-color: rgba(0, 0, 0, .5);
+        font-weight: 600;
+
+        span {
+          @include hover-state(.8, $secondary-color, 150ms);
+        }
+      }
+
+      &__label {
+        vertical-align: middle;
+        color: $primary-color;
+        font-size: 0.6rem;
+      }
+    }
+  }
+}
+
 @include responsive-below(lg) {
   .layout-container {
     width: 98%;
@@ -82,5 +128,49 @@
 
   .layout-header--logo--link {
     margin-left: .4rem;
+  }
+
+  .layout-content {
+    width: 50%;
+    margin: 0 auto;
+    flex-direction: column;
+
+    &--introduction  {
+      width: 100%;
+      margin-right: 0;
+    }
+
+    &--introduction {
+      margin-top: 2rem;
+    }
+  }
+}
+
+@include responsive-below(md) {
+  .layout-content {
+    width: 70%;
+
+    &--introduction--title {
+      font-size: 2.1rem;
+    }
+  }
+}
+
+@include responsive-below(sm) {
+  .layout-content {
+    width: 98%;
+  }
+
+  #terms {
+    display: block;
+  }
+}
+
+@include responsive-below(xs) {
+  .layout-content--introduction--title {
+
+    br {
+      display: none;
+    }
   }
 }

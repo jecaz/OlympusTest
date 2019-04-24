@@ -1,153 +1,102 @@
 @import "../shared-styles/variables";
 @import "../shared-styles/mixins";
 
-.register-container {
-  height: 100vh;
-}
-
-.register {
+.register-information {
   display: flex;
-  justify-content: space-between;
+  margin-right: 4rem;
+  width: 45%;
+  max-width: 27rem;
+  min-width: 22rem;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background: $primary-color;
 
-  &--introduction {
-    margin-right: 1rem;
-    width: 60%;
-    align-self: center;
-    color: $primary-color;
+  &-action {
+    width: 15%;
+    border-right: 1px solid $border-color;
 
-    &--title {
-      @include font-style(1.5rem, 'Roboto');
-      margin-bottom: 2rem;
-      line-height: 1.3;
-    }
-
-    &--description {
-      margin-bottom: 2rem;
-      line-height: 1.5;
-      font-size: 0.8rem;
-    }
-
-    &--button {
-      padding: 8px 30px;
-      background-color: transparent;
-      border: 2px solid $primary-color;
-      border-radius: 3px;
-      outline: none;
-
-      &:hover {
-        border-color: rgba(0, 0, 0, .5);
-        font-weight: 600;
-
-        span {
-          @include hover-state(.8, $secondary-color, 150ms);
-        }
+    &--turn-off, &--turn-on {
+      .fa-power-off {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
       }
+    }
 
-      &__label {
-        vertical-align: middle;
-        color: $primary-color;
-        font-size: 0.6rem;
+    &--turn-off {
+      height: 50%;
+
+      .fa-power-off {
+        padding: 112px 0px;
+        color: $red-color;
+      }
+    }
+
+    &--turn-on {
+      border-top: 1px solid $border-color;
+      background: $gray-100;
+      opacity: .4;
+
+      .fa-power-off {
+        padding: 115px 0px;
+        transform: rotate(90deg);
+        color: gray;
       }
     }
   }
 
-  &-information {
-    display: flex;
-    margin-right: 4rem;
-    width: 45%;
-    max-width: 27rem;
-    min-width: 22rem;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    background: $primary-color;
+  &--form {
+    width: 85%;
 
-    &-action {
-      width: 15%;
-      border-right: 1px solid $border-color;
-
-      &--turn-off, &--turn-on {
-        .fa-power-off {
-          display: inline-block;
-          width: 100%;
-          height: 100%;
-          text-align: center;
-        }
-      }
-
-      &--turn-off {
-        height: 50%;
-
-        .fa-power-off {
-          padding: 112px 0px;
-          color: $red-color;
-        }
-      }
-
-      &--turn-on {
-        border-top: 1px solid $border-color;
-        background: $gray-100;
-        opacity: .4;
-
-        .fa-power-off {
-          padding: 115px 0px;
-          transform: rotate(90deg);
-          color: gray;
-        }
-      }
+    &--header {
+      padding: 20px 13px;
+      border-bottom: 1px solid $border-color;
+      color: $gray-800;
+      font-size: .9rem;
+      font-weight: 600;
     }
 
-    &--form {
-      width: 85%;
+    &--info {
+      padding: 25px 13px 30px 13px;
 
-      &--header {
-        padding: 20px 13px;
-        border-bottom: 1px solid $border-color;
-        color: $gray-800;
-        font-size: .9rem;
-        font-weight: 600;
+      &--basic {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
       }
 
-      &--info {
-        padding: 25px 13px 30px 13px;
+      .firstname-input {
+        display: inline-block;
+        margin-right: 22px;
+        width: 46%;
+      }
 
-        &--basic {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-        }
+      .lastname-input {
+        display: inline-block;
+        width: 46%;
+      }
 
-        .firstname-input {
-          display: inline-block;
-          margin-right: 22px;
-          width: 46%;
-        }
+      &-checkbox {
+        margin: 30px 0 25px 0;
 
-        .lastname-input {
-          display: inline-block;
-          width: 46%;
-        }
+        &-label {
+          font-size: .7rem;
 
-        &-checkbox {
-          margin: 30px 0 25px 0;
-
-          &-label {
-            font-size: .7rem;
-
-            #terms {
-              color: $red;
-            }
+          #terms {
+            color: $red;
           }
         }
+      }
 
-        &--register-button {
-          width: 100%;
-          background: #7F00FF;
-          color: $primary-color;
+      &--register-button {
+        width: 100%;
+        background: #7F00FF;
+        color: $primary-color;
 
-          &:hover {
-            background-color: #4C0099;
-            transition: all 220ms linear;
-          }
+        &:hover {
+          background-color: #4C0099;
+          transition: all 220ms linear;
         }
       }
     }
@@ -200,50 +149,39 @@
 }
 
 @include responsive-below(lg) {
+  .register-information  {
+    width: 100%;
+    margin-right: 0;
+  }
 
-  .register {
-    width: 50%;
-    margin: 0 auto;
+  .register-information {
     flex-direction: column;
+    align-self: center;
+    margin-top: 2rem;
+    max-width: none;
 
-    &--introduction, &-information  {
+    &--form {
       width: 100%;
-      margin-right: 0;
     }
 
-    &--introduction {
-      margin-top: 2rem;
-    }
+    &-action {
+      display: flex;
+      width: 100%;
+      line-height: 5rem;
+      border-bottom: 1px solid $border-color;
 
-    &-information {
-      flex-direction: column;
-      align-self: center;
-      margin-top: 2rem;
-      max-width: none;
-
-      &--form {
-        width: 100%;
+      &--turn-off, &--turn-on {
+        padding: 0;
+        width: 50%;
       }
 
-      &-action {
-        display: flex;
-        width: 100%;
-        line-height: 5rem;
-        border-bottom: 1px solid $border-color;
+      &--turn-on {
+        border-left: 1px solid $border-color;
+      }
 
-        &--turn-off, &--turn-on {
-          padding: 0;
-          width: 50%;
-        }
-
-        &--turn-on {
-          border-left: 1px solid $border-color;
-        }
-
-        .fa-power-off {
-          padding: 0;
-          height: inherit;
-        }
+      .fa-power-off {
+        padding: 0;
+        height: inherit;
       }
     }
   }
@@ -261,37 +199,12 @@
   }
 }
 
-@include responsive-below(md) {
-  .register {
-    width: 70%;
-
-    &--introduction--title {
-      font-size: 2.1rem;
-    }
-  }
-}
-
 @include responsive-below(sm) {
-  .register {
-    width: 98%;
-
-    &-information {
-      min-width: inherit;
-    }
+  .register-information {
+    min-width: inherit;
   }
 
   #terms {
     display: block;
   }
 }
-
-@include responsive-below(xs) {
-  .register--introduction--title {
-
-    br {
-      display: none;
-    }
-  }
-}
-
-

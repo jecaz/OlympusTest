@@ -1,3 +1,24 @@
-<p>
-  login works!
-</p>
+<div class="register-information" style="background: white;">
+  <div class="register-information-action" style="display: flex; flex-direction: column;">
+    <div class="register-information-action--turn-off" style="order: 2;">
+      <span class="fas fa-power-off"></span>
+    </div>
+    <div class="register-information-action--turn-on">
+      <span class="fas fa-power-off"></span>
+    </div>
+  </div>
+  <div class="register-information--form">
+    <h3 class="register-information--form--header">Register to Olympus</h3>
+    <form class="register-information--form--info" [formGroup]="user">
+      <input class="signup-input" formControlName="email" type="text" placeholder="Your email">
+      <input class="signup-input" formControlName="password" type="text" placeholder="Your password">
+      <div class="register-information--form--info-checkbox">
+        <input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox" checked>
+        <label for="checkbox-1" class="checkbox-custom-label">
+          <span class="register-information--form--info-checkbox-label">Remember me!</span>
+        </label>
+      </div>
+      <button type="button" class="btn register-information--form--info--register-button">Login</button>
+    </form>
+  </div>
+</div>

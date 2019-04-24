@@ -15,7 +15,22 @@
       </header>
     </div>
     <div class="layout-container">
-      <router-outlet></router-outlet>
+        <section class="layout-content">
+          <div class="layout-content--introduction">
+            <h1 class="layout-content--introduction--title">
+              Welcome to the Biggest Social<br>
+              Network in the Word
+            </h1>
+            <p class="layout-content--introduction--description">
+              We are the best and biggest social network with 5 billion active users all around the world. Share your
+              thoughts, write blog posts, show your favourite music with Stopify, earn badges and much more!
+            </p>
+            <button class="layout-content--introduction--button">
+              <span class="layout-content--introduction--button__label">Register now!</span>
+            </button>
+          </div>
+          <router-outlet></router-outlet>
+        </section>
     </div>
   </div>
 </div>
