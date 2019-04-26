@@ -1,1 +1,69 @@
 @import "../register/register.component";
+@import "../page-layout-signup/page-layout-signup.component";
+
+.login {
+  @include button-style(login-btn, #F5411D, #DE3B1A);
+  @include button-style(login-btn--facebook, #3b5998, #325179);
+  @include button-style(login-btn--twitter, #0DC7EC, #07ADCE);
+
+  .fa-facebook-f, .fa-twitter {
+    margin-right: .6rem;
+  }
+
+  &-btn--twitter {
+    margin: 1rem 0 1.2rem 0;
+  }
+
+  &-link--forgot-password {
+    display: inline-block;
+    width: 50%;
+    color: inherit;
+    text-align: right;
+    font-size: .7rem;
+
+    &:hover {
+      color: #03a9f4;
+    }
+  }
+
+  &--register-section {
+    line-height: 1.7;
+    font-size: .7rem;
+
+    &-link {
+      color: $red-color;
+    }
+  }
+}
+
+.line-thru {
+  display: block;
+  margin: 1.5rem 0;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+  font-size: .7rem;
+
+  &::before {
+    width: 40px;
+    height: 10px;
+    background-color: #FFF;
+    content: '';
+    margin: -5px 0 0 -20px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+  }
+
+  &::after {
+    border-bottom: 1px solid #dfe0e6;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 49%;
+    width: 100%;
+    z-index: -2;
+  }
+}

@@ -1,11 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 
-export interface Gender {
-  value: string;
-  viewValue: string;
-}
-
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -14,10 +9,6 @@ export interface Gender {
 export class RegisterComponent implements OnInit {
 
   user: FormGroup;
-  gender: Gender[] = [
-    {value: 'male', viewValue: 'Male'},
-    {value: 'fimale', viewValue: 'Fimale'}
-  ];
 
   constructor() { }
 

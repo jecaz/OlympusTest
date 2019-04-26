@@ -1,104 +1,46 @@
 @import "../shared-styles/variables";
 @import "../shared-styles/mixins";
 
-.register-information {
-  display: flex;
-  margin-right: 4rem;
-  width: 45%;
-  max-width: 27rem;
-  min-width: 22rem;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-  background: $primary-color;
+.register-information--form--info {
+  padding: 25px 20px 30px 20px;
 
-  &-action {
-    width: 15%;
-    border-right: 1px solid $border-color;
+  &--basic {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-    &--turn-off, &--turn-on {
-      .fa-power-off {
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-      }
-    }
+  .firstname-input {
+    display: inline-block;
+    margin-right: 22px;
+    width: 46%;
+  }
 
-    &--turn-off {
-      height: 50%;
+  .lastname-input {
+    display: inline-block;
+    width: 46%;
+  }
 
-      .fa-power-off {
-        padding: 112px 0px;
-        color: $red-color;
-      }
-    }
+  &-checkbox {
+    margin: 30px 0 25px 0;
 
-    &--turn-on {
-      border-top: 1px solid $border-color;
-      background: $gray-100;
-      opacity: .4;
+    &-label {
+      font-size: .7rem;
 
-      .fa-power-off {
-        padding: 115px 0px;
-        transform: rotate(90deg);
-        color: gray;
+      #terms {
+        color: $red;
       }
     }
   }
 
-  &--form {
-    width: 85%;
+  &--register-button {
+    width: 100%;
+    background: #7F00FF;
+    color: $primary-color;
 
-    &--header {
-      padding: 20px 13px;
-      border-bottom: 1px solid $border-color;
-      color: $gray-800;
-      font-size: .9rem;
-      font-weight: 600;
-    }
-
-    &--info {
-      padding: 25px 13px 30px 13px;
-
-      &--basic {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-      }
-
-      .firstname-input {
-        display: inline-block;
-        margin-right: 22px;
-        width: 46%;
-      }
-
-      .lastname-input {
-        display: inline-block;
-        width: 46%;
-      }
-
-      &-checkbox {
-        margin: 30px 0 25px 0;
-
-        &-label {
-          font-size: .7rem;
-
-          #terms {
-            color: $red;
-          }
-        }
-      }
-
-      &--register-button {
-        width: 100%;
-        background: #7F00FF;
-        color: $primary-color;
-
-        &:hover {
-          background-color: #4C0099;
-          transition: all 220ms linear;
-        }
-      }
+    &:hover {
+      background-color: #4C0099;
+      transition: all 220ms linear;
     }
   }
 }
@@ -149,42 +91,6 @@
 }
 
 @include responsive-below(lg) {
-  .register-information  {
-    width: 100%;
-    margin-right: 0;
-  }
-
-  .register-information {
-    flex-direction: column;
-    align-self: center;
-    margin-top: 2rem;
-    max-width: none;
-
-    &--form {
-      width: 100%;
-    }
-
-    &-action {
-      display: flex;
-      width: 100%;
-      line-height: 5rem;
-      border-bottom: 1px solid $border-color;
-
-      &--turn-off, &--turn-on {
-        padding: 0;
-        width: 50%;
-      }
-
-      &--turn-on {
-        border-left: 1px solid $border-color;
-      }
-
-      .fa-power-off {
-        padding: 0;
-        height: inherit;
-      }
-    }
-  }
 
   .signup-input-gender::after {
     display: none;
@@ -200,10 +106,6 @@
 }
 
 @include responsive-below(sm) {
-  .register-information {
-    min-width: inherit;
-  }
-
   #terms {
     display: block;
   }

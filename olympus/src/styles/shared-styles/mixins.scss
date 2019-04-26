@@ -24,6 +24,17 @@
   }
 }
 
+@mixin button-style($class-name, $bg-color, $bg-hover-color) {
+  button.#{$class-name} {
+    background-color: $bg-color;
+
+    &:hover {
+      background-color: $bg-hover-color;
+      transition: all 220ms linear;
+    }
+  }
+}
+
 @mixin responsive-below($breakpoint) {
 
   // If the breakpoint exists in the map.
