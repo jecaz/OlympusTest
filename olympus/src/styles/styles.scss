@@ -1,4 +1,37 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "~bootstrap/scss/bootstrap";
 @import "shared-styles/checkbox";
+@import "shared-styles/mixins";
 @import './reset';
+
+html {
+  @include font-style(62.5%, 'Roboto');
+  background: url('../assets/images/users-bg.png') repeat center center fixed;
+  position: relative;
+  height: 100vh;
+}
+
+body {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $full-width;
+  height: $full-height;
+  background-color: $layout-bg-color;
+}
+
+@include responsive-below(lg) {
+  body {
+    height: auto;
+  }
+}
+
+//.layer {
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//  width: $full-width;
+//  height: $full-height;
+//  background-color: $layout-bg-color;
+//}

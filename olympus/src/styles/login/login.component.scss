@@ -2,9 +2,9 @@
 @import "../page-layout-signup/page-layout-signup.component";
 
 .login {
-  @include button-style(login-btn, #F5411D, #DE3B1A);
-  @include button-style(login-btn--facebook, #3b5998, #325179);
-  @include button-style(login-btn--twitter, #0DC7EC, #07ADCE);
+  @include button-style(login-btn, $login-btn-color, $login-btn-color-hover);
+  @include button-style(login-btn--facebook, $facebook-btn-color, $facebook-btn-color-hover);
+  @include button-style(login-btn--twitter, $twitter-btn-color, $twitter-btn-color-hover);
 
   .fa-facebook-f, .fa-twitter {
     margin-right: .6rem;
@@ -16,19 +16,19 @@
 
   &-link--forgot-password {
     display: inline-block;
-    width: 50%;
+    width: $full-width / 2;
     color: inherit;
     text-align: right;
-    font-size: .7rem;
+    font-size: 1rem;
 
     &:hover {
-      color: #03a9f4;
+      color: $link-hover;
     }
   }
 
   &--register-section {
     line-height: 1.7;
-    font-size: .7rem;
+    font-size: 1rem;
 
     &-link {
       color: $red-color;
@@ -40,17 +40,17 @@
   display: block;
   margin: 1.5rem 0;
   position: relative;
-  width: 100%;
+  width: $full-width;
   z-index: 1;
   text-align: center;
-  font-size: .7rem;
+  font-size: 1rem;
 
   &::before {
-    width: 40px;
-    height: 10px;
-    background-color: #FFF;
+    width: 4rem;
+    height: 1rem;
+    background-color: $primary-color;
     content: '';
-    margin: -5px 0 0 -20px;
+    margin: -0.5rem 0 0 -2rem;
     left: 50%;
     position: absolute;
     top: 50%;
@@ -63,7 +63,7 @@
     display: block;
     position: absolute;
     top: 49%;
-    width: 100%;
+    width: $full-width;
     z-index: -2;
   }
 }

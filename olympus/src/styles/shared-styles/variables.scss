@@ -6,6 +6,24 @@ $primary-color: $white;
 $secondary-color: $black;
 $border-color: $gray-200;
 $red-color: #F94F4F;
+$full-width: map_get($sizes, 100);
+$full-height: map_get($sizes, 100);
+$margin: $spacer;
+$border-radius: $rounded-pill;
+$link-hover: #03a9f4;
+
+// Login
+$login-btn-color: #F5411D;
+$login-btn-color-hover: #DE3B1A;
+$facebook-btn-color: #3b5998;
+$facebook-btn-color-hover: #325179;
+$twitter-btn-color: #0DC7EC;
+$twitter-btn-color-hover: #07ADCE;
+
+// Register
+$register-btn-color: #7F00FF;
+$register-btn-color-hover: #4C0099;
+
 
 // Checkbox
 $checkbox-bg-color: $white;

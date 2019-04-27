@@ -2,7 +2,10 @@
 @import "../shared-styles/mixins";
 
 .register-information--form--info {
-  padding: 25px 20px 30px 20px;
+  @include button-style(register-information--form--info--register-button,
+                        $register-btn-color,
+                        $register-btn-color-hover);
+  padding: 2.5rem 2rem 3rem 2rem;
 
   &--basic {
     display: flex;
@@ -10,22 +13,20 @@
     justify-content: space-between;
   }
 
-  .firstname-input {
+  .firstname-input, .lastname-input {
     display: inline-block;
-    margin-right: 22px;
-    width: 46%;
+    width: $full-width / 2 - 4;
   }
 
-  .lastname-input {
-    display: inline-block;
-    width: 46%;
+  .firstname-input {
+    margin-right: 2.2rem;
   }
 
   &-checkbox {
-    margin: 30px 0 25px 0;
+    margin: 3rem 0 2.5rem 0;
 
     &-label {
-      font-size: .7rem;
+      font-size: 1rem;
 
       #terms {
         color: $red;
@@ -34,42 +35,36 @@
   }
 
   &--register-button {
-    width: 100%;
-    background: #7F00FF;
+    width: $full-width;
     color: $primary-color;
-
-    &:hover {
-      background-color: #4C0099;
-      transition: all 220ms linear;
-    }
   }
 }
 
 .signup-input, .signup-input-birthday, .signup-input-gender {
-  margin: 5px 0;
+  margin: .5rem 0;
   border: 1px solid $border-color;
   border-radius: 3px;
 }
 
 .signup-input::-webkit-input-placeholder {
-  font-size: .9rem;
+  font-size: 1.3rem;
 }
 
 .signup-input {
-  padding: 12px 15px;
-  width: 100%;
+  padding: 1.2rem 1.5rem;
+  width: $full-width;
   box-shadow: none;
 }
 
 .signup-input-birthday, .signup-input-gender {
   display: inline-block;
   position: relative;
-  padding: 3px 15px;
-  width: 100%;
+  padding: .6rem 1.5rem;
+  width: $full-width;
+  font-size: 1.4rem;
 
   input {
-    display:block;
-    line-height: 1.2em;
+    display: block;
     outline: none;
     border: none;
     color: $gray-800;
@@ -78,7 +73,7 @@
   label {
     display: block;
     color: $gray-600;
-    font-size: 12px;
+    font-size: 1rem;
   }
 }
 
@@ -100,7 +95,7 @@
     display: block;
 
     .firstname-input, .lastname-input {
-      width: 100%;
+      width: $full-width;
     }
   }
 }
