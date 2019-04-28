@@ -16,3 +16,8 @@ body {
   background: url('../assets/images/users-bg.png') repeat center center fixed;
   height: 100vh;
 }
+
+.background-layout {
+  background-color: $app-bg-color;
+  overflow-x: hidden;
+}

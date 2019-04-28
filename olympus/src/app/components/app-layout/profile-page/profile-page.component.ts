@@ -12,4 +12,11 @@ export class ProfilePageComponent implements OnInit {
   ngOnInit() {
   }
 
+  clickLi() {
+    console.log('li click');
+  }
+
+  cliskSpan() {
+    console.log('user name clicked');
+  }
 }

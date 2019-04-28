@@ -20,7 +20,7 @@ export class AppLayoutComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.renderer.removeClass(document.body, 'background-layout');
+    // this.renderer.removeClass(document.body, 'background-layout');
   }
 
   public goToSection() {

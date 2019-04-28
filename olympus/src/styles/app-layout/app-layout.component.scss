@@ -1,11 +1,6 @@
 @import "../shared-styles/variables";
 @import "../shared-styles/mixins";
 
-.background-layout {
-  background-color: $app-bg-color;
-  overflow-x: hidden;
-}
-
 .app-layout {
   position: relative;
 
@@ -124,6 +119,17 @@
         padding: 0 1.5rem;
         align-self: center;
         text-align: center;
+
+        .notification-container {
+
+          &:hover {
+
+            .fa-grin, .fa-comments, .fa-bolt {
+              font-size: 1.25rem;
+              transition: all 220ms ease-in-out;
+            }
+          }
+        }
       }
     }
   }
