@@ -1,5 +1,5 @@
-@import "../shared-styles/variables";
-@import "../shared-styles/mixins";
+@import "../../shared-styles/variables";
+@import "../../shared-styles/mixins";
 
 .register-information--form--info {
   @include button-style(register-information--form--info--register-button,
@@ -51,8 +51,7 @@
 }
 
 .signup-input {
-  padding: 1.2rem 1.5rem;
-  width: $full-width;
+  @include input-style(1.2rem 1.5rem, $primary-color, inherite, $primary-color, inherite);
   box-shadow: none;
 }
 
@@ -61,10 +60,17 @@
   position: relative;
   padding: .6rem 1.5rem;
   width: $full-width;
+  -webkit-transition: all 320ms ease-in-out;
   font-size: 1.4rem;
+
+  &:focus-within {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
+  }
 
   input {
     display: block;
+    width: $full-width;
     outline: none;
     border: none;
     color: $gray-800;

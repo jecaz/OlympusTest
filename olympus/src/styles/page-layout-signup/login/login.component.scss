@@ -1,5 +1,5 @@
 @import "../register/register.component";
-@import "../page-layout-signup/page-layout-signup.component";
+@import "../page-layout-signup.component";
 
 .login {
   @include button-style(login-btn, $login-btn-color, $login-btn-color-hover);

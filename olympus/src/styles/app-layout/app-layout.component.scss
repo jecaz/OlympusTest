@@ -1,0 +1,269 @@
+@import "../shared-styles/variables";
+@import "../shared-styles/mixins";
+
+.background-layout {
+  background-color: $app-bg-color;
+  overflow-x: hidden;
+}
+
+.app-layout {
+  position: relative;
+
+  .btn-to-top {
+    @include hover-btn-state($app-primary-color-hover);
+    position: absolute;
+    right: 6.5rem;
+    bottom: 0.5rem;
+    box-shadow: 0 0 7px $shadow-color;
+    border-radius: 50%;
+    background-color: $app-primary-color;
+    color: $primary-color;
+  }
+}
+
+.header {
+  position: fixed;
+  width: $full-width;
+  z-index: 2;
+  display: flex;
+  height: 5rem;
+  background: $app-header-bg-color;
+  color: $primary-color;
+  font-size: 1.2rem;
+
+  &-logo {
+    @include hover-btn-state($app-primary-color-hover);
+    display: flex;
+    justify-content: center;
+    width: $full-width - 96;
+    min-width: 5.3rem;
+    height: $full-height;
+    background-color: $app-primary-color;
+
+    a {
+      align-self: center;
+    }
+  }
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    width: $full-width - 4;
+
+    .header-left {
+      display: flex;
+      width: $full-width / 5 * 3;
+      height: $full-height;
+
+      &-search {
+        width: $full-width;
+        height: inherit;
+        align-self: center;
+
+        &--current-page {
+          padding: 0 3.5rem 0 2rem;
+          text-transform: uppercase;
+        }
+
+        #search {
+          @include input-icon("\f002");
+          display: inline-block;
+          position: relative;
+          width: $full-width / 2;
+          height: inherit;
+
+          &::after {
+            top: 40%;
+            color: $text-color-secondary;
+          }
+        }
+
+        &--input {
+          @include input-style(0 1rem, $input-bg-color, $primary-color, $primary-color, $input-color);
+          height: inherit;
+          border: none;
+
+          &::-webkit-input-placeholder {
+            color: $input-color;
+            font-size: 1.1rem;
+          }
+        }
+
+        &--label {
+          cursor: pointer;
+          margin-left: 2rem;
+        }
+      }
+    }
+  }
+}
+
+.header-right {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 5.3rem;
+  width: $full-width / 5 * 2;
+  height: $full-height;
+  padding-right: 1rem;
+
+  &-nav {
+    display: inline-block;
+    width: $full-width / 5 * 3;
+    height: $full-height;
+
+    &-list {
+      display: flex;
+      justify-content: flex-end;
+      height: inherit;
+
+      &-item {
+        @include notification-container();
+        @include notification-counter(smile, 1.2rem, 1.3rem, 1.5rem, 1.5rem, .25rem .2rem, $app-third-color);
+        @include notification-counter(messages, 1.2rem, 1.1rem, 1.5rem, 1.5rem, .25rem .2rem, $app-secondary-color);
+        @include notification-counter(bolt, 1.2rem, 0.9rem, 1.5rem, 1.5rem, .25rem .2rem, $red);
+        padding: 0 1.5rem;
+        align-self: center;
+        text-align: center;
+      }
+    }
+  }
+
+  &--user-info {
+    @include input-icon("\f078");
+    @include notification-container();
+    @include notification-counter(user-state, 3.2rem, 0rem, 6px, 6px, .25rem .2rem, $active-user-state-color);
+    display: inline-block;
+    position: relative;
+    padding-right: 2.5rem;
+    height: $full-height;
+    vertical-align: bottom;
+
+    .notification-counter {
+      border: 2px solid $app-header-bg-color;
+    }
+
+    &::after {
+      margin-right: 0;
+      top: 24%;
+      color: $primary-color;
+      zoom: .6;
+      padding: 1rem;
+      right: -8%;
+      cursor: pointer;
+    }
+
+    &-icon {
+      line-height: 5rem;
+
+      img {
+        width: 3rem;
+        border-radius: 50%;
+        vertical-align: middle;
+      }
+    }
+
+    &-name {
+      display: inline-block;
+      padding: 0 0 0 1rem;
+      vertical-align: middle;
+
+      .nickname {
+        display: inline-block;
+        margin-top: .5rem;
+        color: $text-color-secondary;
+        text-transform: uppercase;
+        font-size: .7rem;
+      }
+    }
+  }
+}
+
+.content {
+  display: flex;
+
+  .menu, .active-users {
+    width: 4%;
+    min-width: 5.3rem;
+    box-shadow: 0 0 7px $shadow-color;
+    background-color: $sidebar-bg-color;
+  }
+
+  .menu {
+    background-image: linear-gradient(to right, $gradient-color, $sidebar-bg-color 7%);
+
+    &-list {
+
+      &:first-child {
+        margin-top: 1rem;
+      }
+
+      &--item {
+        @include nav-item-hover();
+
+        .menu-link {
+          color: $gray-600;
+          opacity: .7;
+        }
+      }
+    }
+  }
+
+  .active-users {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: linear-gradient(to left, $gradient-color, $sidebar-bg-color 7%);
+
+    &-list {
+      @include notification-container();
+      @include notification-counter(user, 3.6rem, 1.5rem, 6px, 6px, .25rem .2rem);
+
+      .notification-counter {
+        border: 1px solid $primary-color;
+      }
+    }
+
+    &-list-item {
+      @include nav-item-hover(left, left, right);
+      padding: 1rem 0;
+      text-align: center;
+
+      &--user-icon {
+        width: 3rem;
+      }
+    }
+
+    &-options {
+
+      &-bar, &-message {
+        padding: 2rem 1.5rem 2rem 2rem;
+        text-align: right;
+        cursor: pointer;
+      }
+
+      &-bar {
+        @include hover-btn-state($gradient-color);
+        color: $active-user-sidebar-menu-btn-color;
+        opacity: .7;
+      }
+
+      &-message {
+        @include hover-btn-state($register-btn-color);
+        background-color: $active-user-sidebar-message-btn-color;
+        color: $primary-color;
+      }
+    }
+  }
+
+  .content-main {
+    margin-top: 5rem;
+    padding-top: 3rem;
+    width: $full-width - 8;
+
+    &-container {
+      width: $full-width / 2 + 10;
+      margin: 0 auto;
+    }
+  }
+}

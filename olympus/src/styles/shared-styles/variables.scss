@@ -24,6 +24,23 @@ $twitter-btn-color-hover: #07ADCE;
 $register-btn-color: #7F00FF;
 $register-btn-color-hover: #4C0099;
 
+// App layout
+$app-bg-color: #eff4f7;
+$shadow-color: #ccc;
+$app-header-bg-color: #323E4D;
+$text-color-secondary: #aaaaaa;
+$input-bg-color: #475464;
+$input-color: gray;
+$app-primary-color: $login-btn-color;
+$app-primary-color-hover: $login-btn-color-hover;
+$app-secondary-color: #8B4CD2;
+$app-third-color: #55ACEE;
+$active-user-state-color: #2ADC89;
+$gradient-color: rgba(215, 218, 216, .8);
+$sidebar-bg-color: #fefefe;
+$active-user-sidebar-menu-btn-color: #6c757d;
+$active-user-sidebar-message-btn-color: $app-secondary-color;
+
 
 // Checkbox
 $checkbox-bg-color: $white;

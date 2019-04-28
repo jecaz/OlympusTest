@@ -6,32 +6,13 @@
 
 html {
   @include font-style(62.5%, 'Roboto');
-  background: url('../assets/images/users-bg.png') repeat center center fixed;
-  position: relative;
-  height: 100vh;
 }
 
 body {
   font-size: 1.6rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: $full-width;
-  height: $full-height;
-  background-color: $layout-bg-color;
 }
 
-@include responsive-below(lg) {
-  body {
-    height: auto;
-  }
+.background {
+  background: url('../assets/images/users-bg.png') repeat center center fixed;
+  height: 100vh;
 }
-
-//.layer {
-//  position: absolute;
-//  top: 0;
-//  left: 0;
-//  width: $full-width;
-//  height: $full-height;
-//  background-color: $layout-bg-color;
-//}

@@ -3,6 +3,8 @@ import {RegisterComponent} from './components/page-layout-signup/register/regist
 import {PageLayoutSignupComponent} from './components/page-layout-signup/page-layout-signup.component';
 import {NgModule} from '@angular/core';
 import {LoginComponent} from './components/page-layout-signup/login/login.component';
+import {AppLayoutComponent} from './components/app-layout/app-layout.component';
+import {ProfilePageComponent} from './components/app-layout/profile-page/profile-page.component';
 
 const appRoutes: Routes = [
 
@@ -11,6 +13,11 @@ const appRoutes: Routes = [
       { path: '', redirectTo: 'register', pathMatch: 'full' },
       { path: 'register', component: RegisterComponent },
       { path: 'login', component: LoginComponent }
+    ]},
+  {path: 'app', component: AppLayoutComponent,
+    children: [
+      { path: '', redirectTo: 'profile', pathMatch: 'full' },
+      { path: 'profile', component: ProfilePageComponent }
     ]},
   {path: '**', redirectTo: '', pathMatch: 'full'}
 ];

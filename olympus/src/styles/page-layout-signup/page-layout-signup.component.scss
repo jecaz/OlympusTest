@@ -1,20 +1,13 @@
 @import "../shared-styles/variables";
 @import "../shared-styles/mixins";
 
-.background {
-  //background: url('../../assets/images/users-bg.png') repeat;
-  //position: relative;
-  //height: 100vh;
-}
-
 .layer {
-  //@include font-style(100%, 'Roboto');
-  //position: absolute;
-  //top: 0;
-  //left: 0;
-  //width: $full-width;
-  //height: $full-height;
-  //background-color: $layout-bg-color;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $full-width;
+  height: $full-height;
+  background-color: $layout-bg-color;
 }
 
 .layout-container {
@@ -206,6 +199,10 @@
 }
 
 @include responsive-below(lg) {
+  .layer {
+    height: auto;
+  }
+
   .layout-container {
     width: $full-width - 2;
   }

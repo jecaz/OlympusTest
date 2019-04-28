@@ -1,21 +1,18 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
-import {RegisterComponent} from './register.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {ProfilePageComponent} from './profile-page.component';
 
 @NgModule({
   declarations: [
-    RegisterComponent
+    ProfilePageComponent
   ],
   imports: [
-    FormsModule,
-    ReactiveFormsModule,
     BrowserModule,
     RouterModule
   ],
   providers: [],
-  exports: [RegisterComponent]
+  exports: [ProfilePageComponent]
 })
-export class RegisterModule {
+export class ProfilePageModule {
 }

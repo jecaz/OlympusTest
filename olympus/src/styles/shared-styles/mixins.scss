@@ -26,14 +26,85 @@
 
 @mixin button-style($class-name, $bg-color, $bg-hover-color) {
   button.#{$class-name} {
+    @include hover-btn-state($bg-hover-color);
     padding: .9rem 0;
     background-color: $bg-color;
     font-size: 1.3rem;
+  }
+}
 
-    &:hover {
-      background-color: $bg-hover-color;
-      transition: all 220ms linear;
+@mixin hover-btn-state($bg-hover-color) {
+  &:hover {
+    background-color: $bg-hover-color;
+    transition: all 220ms linear;
+  }
+}
+
+@mixin notification-container() {
+  .notification-container {
+    color: $primary-color;
+    position: relative;
+
+    .fa-grin, .fa-comments, .fa-bolt {
+      zoom: 1.5;
     }
+  }
+
+  .notification-counter {
+    position: absolute;
+    border-radius: 50%;
+    font: 7px Verdana;
+    color: $primary-color;
+    opacity: 1;
+  }
+}
+
+@mixin notification-counter($counter-name, $bottom, $left, $width, $height, $padding, $bg-color: "") {
+  .notification-counter-#{$counter-name} {
+    @if $bg-color != "" {
+      background-color: $bg-color;
+    }
+    bottom: $bottom;
+    left: $left;
+    width: $width;
+    height: $height;
+    padding: $padding;
+  }
+}
+
+@mixin nav-item-hover($direction1: "", $direction2: "", $direction3: "") {
+  padding: 1.5rem 2rem;
+  @if $direction1 != "" {
+    background: linear-gradient(to $direction1, #F0F0F0 50%, #fefefe 50%) $direction2 bottom;
+  } @else {
+    background: linear-gradient(to right, #F0F0F0 50%, #fefefe 50%) right bottom;
+  }
+  background-size: 200% 100%;
+  transition: all ease 320ms;
+  cursor: pointer;
+
+  &:hover {
+    @if $direction1 != "" {
+      background-position: $direction3 bottom;
+    } @else {
+      background-position: left bottom;
+    }
+  }
+}
+
+@mixin input-style($padding, $bg-color, $color, $bg-color-focus, $color-focus) {
+  padding: $padding;
+  width: $full-width;
+  background-color: $bg-color;
+  -webkit-transition: all 220ms ease-in-out;
+  color: $color;
+  outline: none;
+
+  &:focus {
+    background-color: $bg-color-focus;
+    color: $color-focus;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
   }
 }
 

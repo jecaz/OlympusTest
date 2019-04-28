@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit, Renderer2} from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
@@ -6,11 +6,16 @@ import {Router} from '@angular/router';
   templateUrl: './page-layout-signup.component.html',
   styleUrls: ['../../../styles/page-layout-signup/page-layout-signup.component.scss']
 })
-export class PageLayoutSignupComponent implements OnInit {
+export class PageLayoutSignupComponent implements OnInit, OnDestroy {
 
-  constructor(public router: Router) { }
+  constructor(private renderer: Renderer2, public router: Router) {
+    this.renderer.addClass(document.body, 'background');
+  }
 
   ngOnInit() {
   }
 
+  ngOnDestroy() {
+    this.renderer.removeClass(document.body, 'background');
+  }
 }
