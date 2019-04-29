@@ -16,12 +16,24 @@
     </div>
     <div class="profile-navbar">
       <ul class="row profile-navbar-list">
-        <li class="col profile-navbar-list-item">Timeline</li>
-        <li class="col profile-navbar-list-item">About</li>
-        <li class="col profile-navbar-list-item">Friends</li>
+        <li class="col profile-navbar-list-item">
+          <a routerLink="/app/profile"
+             routerLinkActive="active-link"
+             [routerLinkActiveOptions]="{exact: true}">Timeline</a>
+        </li>
+        <li class="col profile-navbar-list-item">
+          <a routerLink="#" routerLinkActive="active-link">About</a>
+        </li>
+        <li class="col profile-navbar-list-item">
+          <a routerLink="#" routerLinkActive="active-link">Friends</a>
+        </li>
         <li class="col profile-navbar-list-item"></li>
-        <li class="col profile-navbar-list-item">Photos</li>
-        <li class="col profile-navbar-list-item">Videos</li>
+        <li class="col profile-navbar-list-item">
+          <a routerLink="#" routerLinkActive="active-link">Photos</a>
+        </li>
+        <li class="col profile-navbar-list-item">
+          <a routerLink="#" routerLinkActive="active-link">Videos</a>
+        </li>
         <li class="col profile-navbar-list-item">
           <i class="fas fa-ellipsis-h"></i>
         </li>
