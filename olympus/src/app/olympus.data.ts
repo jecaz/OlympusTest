@@ -1,5 +1,6 @@
 import {User} from './model/user.model';
 import {Badge} from './model/badge.model';
+import {PlayItem} from './model/play-item.model';
 
 export const ACTIVE = '#2ADC89';
 export const AWAY = '#FFDF5C';
@@ -166,5 +167,42 @@ export const BADGES: Badge[] = [
     name: 'coffee',
     icon: '../../../../assets/images/badge-icons/coffee.png',
     notification: 0
+  })
+];
+export const PLAYLIST: PlayItem[] = [
+  new PlayItem({
+    id: 1,
+    song: 'The Past Starts Slow...',
+    icon: '../../../../assets/images/playlist-icons/stars.jpg',
+    singer: 'System of a Revenge',
+    songDuration: '3:22'
+  }),
+  new PlayItem({
+    id: 2,
+    song: 'The Pretender',
+    icon: '../../../../assets/images/playlist-icons/kung-fighters.jpg',
+    singer: 'Kung Fighters',
+    songDuration: '5:48'
+  }),
+  new PlayItem({
+    id: 3,
+    song: 'Blood Brothers',
+    icon: '../../../../assets/images/playlist-icons/iron-maid.jpg',
+    singer: 'Iron Maid',
+    songDuration: '3:06'
+  }),
+  new PlayItem({
+    id: 4,
+    song: 'Seven Nation Army',
+    icon: '../../../../assets/images/playlist-icons/black-stripes.jpg',
+    singer: 'The Black Stripes',
+    songDuration: '3:06'
+  }),
+  new PlayItem({
+    id: 5,
+    song: 'Killer Queen',
+    icon: '../../../../assets/images/playlist-icons/archiduke.jpg',
+    singer: 'The Black Stripes',
+    songDuration: '3:06'
   })
 ];
