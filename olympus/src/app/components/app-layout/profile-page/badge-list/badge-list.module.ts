@@ -1,20 +1,20 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
-import {ProfilePageComponent} from './profile-page.component';
-import {BadgeListModule} from './badge-list/badge-list.module';
+import {BadgeListComponent} from './badge-list.component';
+import {BadgeModule} from '../badge/badge.module';
 
 @NgModule({
   declarations: [
-    ProfilePageComponent
+    BadgeListComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
-    BadgeListModule
+    BadgeModule
   ],
   providers: [],
-  exports: [ProfilePageComponent]
+  exports: [BadgeListComponent]
 })
-export class ProfilePageModule {
+export class BadgeListModule {
 }

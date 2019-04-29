@@ -1,4 +1,5 @@
 import {User} from './model/user.model';
+import {Badge} from './model/badge.model';
 
 export const ACTIVE = '#2ADC89';
 export const AWAY = '#FFDF5C';
@@ -104,4 +105,66 @@ export const ACTIVE_USERS: User[] = [
     country: null,
     state: ACTIVE
   }),
+];
+export const BADGES: Badge[] = [
+  new Badge({
+    id: 1,
+    name: 'bolt',
+    icon: '../../../../assets/images/logo.png',
+    notification: 2
+  }),
+  new Badge({
+    id: 2,
+    name: 'camera',
+    icon: '../../../../assets/images/badge-icons/camera.png',
+    notification: 0
+  }),
+  new Badge({
+    id: 3,
+    name: 'smile',
+    icon: '../../../../assets/images/badge-icons/smile.png',
+    notification: 4
+  }),
+  new Badge({
+    id: 4,
+    name: 'edit',
+    icon: '../../../../assets/images/badge-icons/edit.png',
+    notification: 0
+  }),
+  new Badge({
+    id: 5,
+    name: 'friend',
+    icon: '../../../../assets/images/active-user-profile/avatar8.png',
+    notification: 0
+  }),
+  new Badge({
+    id: 6,
+    name: 'task',
+    icon: '../../../../assets/images/badge-icons/task.png',
+    notification: 0
+  }),
+  new Badge({
+    id: 7,
+    name: 'cd',
+    icon: '../../../../assets/images/badge-icons/cd.png',
+    notification: 0
+  }),
+  new Badge({
+    id: 8,
+    name: 'calendar',
+    icon: '../../../../assets/images/badge-icons/calendar.png',
+    notification: 2
+  }),
+  new Badge({
+    id: 9,
+    name: 'rocket',
+    icon: '../../../../assets/images/badge-icons/rocket.png',
+    notification: 0
+  }),
+  new Badge({
+    id: 10,
+    name: 'coffee',
+    icon: '../../../../assets/images/badge-icons/coffee.png',
+    notification: 0
+  })
 ];

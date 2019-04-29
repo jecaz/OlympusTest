@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {User} from '../model/user.model';
-import {ACTIVE_USERS} from '../user.data';
+import {ACTIVE_USERS} from '../olympus.data';
 
 @Injectable({
   providedIn: 'root'

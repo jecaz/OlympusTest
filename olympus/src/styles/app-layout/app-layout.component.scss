@@ -19,7 +19,7 @@
 .header {
   position: fixed;
   width: $full-width;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   height: 5rem;
   background: $app-header-bg-color;
@@ -268,7 +268,7 @@
     width: $full-width - 8;
 
     &-container {
-      width: $full-width / 2 + 10;
+      width: $full-width / 2 + 15;
       margin: 0 auto;
     }
   }

@@ -6,15 +6,22 @@
   position: relative;
   box-shadow: 0 0 7px $shadow-color;
   background-color: $primary-color;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 
   &-cover {
     display: block;
     height: 31.5rem;
     margin: -1.2rem -1.2rem 0;
-    border-top: 4px;
+
+    img {
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+    }
+
   }
 
-  &-container {
+  &-cover-container {
     height: 6.5rem;
 
     .user-section {
@@ -46,6 +53,7 @@
 
         .user-name {
           color: $secondary-color;
+          text-align: center;
           text-decoration: none;
           cursor: pointer;
 
@@ -74,6 +82,10 @@
           padding-bottom: 1rem;
           text-align: center;
           font-size: 1.1rem;
+
+          .fa-ellipsis-h {
+            color: $shadow-color;
+          }
         }
       }
 
@@ -110,5 +122,28 @@
         }
       }
     }
+  }
+}
+
+.profile-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+
+  &--left, &--right {
+    display: inline-block;
+    width: $full-width / 4;
+    min-width: 23rem;
+  }
+
+  &--left {
+    .badges-article {
+      padding-bottom: 1rem;
+    }
+  }
+
+  &--middle {
+    display: inline-block;
+    width: $full-width / 2;
   }
 }

@@ -25,6 +25,7 @@ export class User {
   set id(value: number) {
     this._id = value;
   }
+
   get username(): string {
     return this._username;
   }
