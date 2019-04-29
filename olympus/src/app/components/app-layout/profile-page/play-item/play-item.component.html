@@ -1,4 +1,4 @@
-<div *ngIf="playitem" class="play-item">
+<div *ngIf="playitem" class="play-item" [ngClass]="{'first-playitem': playitem.id === 1, 'last-playitem': playitem.id === 5}">
   <div class="play-item-song">
     <span>{{playitem.id}}</span>
     <span class="play-item-song-icon">

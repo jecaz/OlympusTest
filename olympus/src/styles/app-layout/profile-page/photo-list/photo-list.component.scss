@@ -1,0 +1,10 @@
+.photos {
+
+  &-content {
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: auto 3.5rem auto;
+    grid-template-rows: 35% 35% 35%;
+    justify-items: center;
+  }
+}

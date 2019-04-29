@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Badge} from '../../../../model/badge.model';
-import {BadgeService} from '../../../../service/badge.service';
+import {Badge} from '../../../../models/badge.model';
+import {BadgeService} from '../../../../services/badge.service';
 
 @Component({
   selector: 'app-badge-list',

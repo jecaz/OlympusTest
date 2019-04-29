@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {PlayItem} from '../model/play-item.model';
+import {PlayItem} from '../models/play-item.model';
 import {PLAYLIST} from '../olympus.data';
 
 @Injectable({

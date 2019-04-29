@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {PlayItem} from '../../../../model/play-item.model';
+import {PlayItem} from '../../../../models/play-item.model';
 
 @Component({
   selector: 'app-play-item',

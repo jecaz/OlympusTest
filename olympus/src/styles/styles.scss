@@ -3,6 +3,7 @@
 @import "shared-styles/checkbox";
 @import "shared-styles/mixins";
 @import './reset';
+@import "app-layout/profile-page/badge-list/badge-list.component";
 
 html {
   @include font-style(62.5%, 'Roboto');

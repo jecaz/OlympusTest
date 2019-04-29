@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {PlayItem} from '../../../../model/play-item.model';
-import {PlaylistService} from '../../../../service/playlist.service';
+import {PlayItem} from '../../../../models/play-item.model';
+import {PlaylistService} from '../../../../services/playlist.service';
 
 @Component({
   selector: 'app-play-list',

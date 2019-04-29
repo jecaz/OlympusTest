@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {BADGES} from '../olympus.data';
-import {Badge} from '../model/badge.model';
+import {Badge} from '../models/badge.model';
 
 @Injectable({
   providedIn: 'root'

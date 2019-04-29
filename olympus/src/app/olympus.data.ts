@@ -1,6 +1,7 @@
-import {User} from './model/user.model';
-import {Badge} from './model/badge.model';
-import {PlayItem} from './model/play-item.model';
+import {User} from './models/user.model';
+import {Badge} from './models/badge.model';
+import {PlayItem} from './models/play-item.model';
+import {Photo} from "./models/photo.model";
 
 export const ACTIVE = '#2ADC89';
 export const AWAY = '#FFDF5C';
@@ -204,5 +205,43 @@ export const PLAYLIST: PlayItem[] = [
     icon: '../../../../assets/images/playlist-icons/archiduke.jpg',
     singer: 'The Black Stripes',
     songDuration: '3:06'
+  })
+];
+export const PHOTOS: Photo[] = [
+  new Photo({
+    id: 1,
+    icon: '../../../../assets/images/last-photos/lake.jpg'
+  }),
+  new Photo({
+    id: 2,
+    icon: '../../../../assets/images/last-photos/beach.jpg'
+  }),
+  new Photo({
+    id: 3,
+    icon: '../../../../assets/images/last-photos/travel-friends.jpeg'
+  }),
+  new Photo({
+    id: 4,
+    icon: '../../../../assets/images/last-photos/freedom.jpg'
+  }),
+  new Photo({
+    id: 5,
+    icon: '../../../../assets/images/last-photos/fly.jpg'
+  }),
+  new Photo({
+    id: 6,
+    icon: '../../../../assets/images/last-photos/baloon.jpg'
+  }),
+  new Photo({
+    id: 7,
+    icon: '../../../../assets/images/last-photos/off-the-path.jpg'
+  }),
+  new Photo({
+    id: 8,
+    icon: '../../../../assets/images/last-photos/nature.jpg'
+  }),
+  new Photo({
+    id: 9,
+    icon: '../../../../assets/images/last-photos/pool.jpg'
   })
 ];

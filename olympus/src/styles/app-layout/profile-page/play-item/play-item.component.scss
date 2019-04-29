@@ -10,10 +10,6 @@
   font-size: 1rem;
   cursor: pointer;
 
-  &:first-child {
-    margin-top: 1rem;
-  }
-
   &-song {
     display: flex;
     align-items: center;
@@ -40,4 +36,12 @@
 
 .icon-frame {
   border: 1px solid $gradient-color;
+}
+
+.first-playitem {
+  margin-top: 1rem;
+}
+
+.last-playitem {
+  margin-bottom: 1rem;
 }
