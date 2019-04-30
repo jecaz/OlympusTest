@@ -3,6 +3,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
 import {ActorVoteListComponent} from './actor-vote-list.component';
 import {ActorVoteModule} from '../actor-vote/actor-vote.module';
+import {ArticleCardModule} from '../../../../common/article-card/article-card.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import {ActorVoteModule} from '../actor-vote/actor-vote.module';
   imports: [
     BrowserModule,
     RouterModule,
-    ActorVoteModule
+    ActorVoteModule,
+    ArticleCardModule
   ],
   providers: [],
   exports: [ActorVoteListComponent]

@@ -3,6 +3,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
 import {BadgeListComponent} from './badge-list.component';
 import {BadgeModule} from '../badge/badge.module';
+import {ArticleCardModule} from '../../../../common/article-card/article-card.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import {BadgeModule} from '../badge/badge.module';
   imports: [
     BrowserModule,
     RouterModule,
-    BadgeModule
+    BadgeModule,
+    ArticleCardModule
   ],
   providers: [],
   exports: [BadgeListComponent]

@@ -1,5 +1,5 @@
-@import "../../../shared-styles/variables";
-@import "../../../shared-styles/mixins";
+@import "../../../common/variables";
+@import "../../../common/mixins";
 
 @include notification-container();
 @include notification-counter(smile, 1.8rem, 2rem, 1.5rem, 1.5rem, .25rem .2rem, $badge-notification-primary-color);

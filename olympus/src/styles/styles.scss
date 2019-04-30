@@ -1,8 +1,8 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "~bootstrap/scss/bootstrap";
-@import "shared-styles/checkbox";
-@import "shared-styles/radio-button";
-@import "shared-styles/mixins";
+@import "common/checkbox";
+@import "common/radio-button";
+@import "common/mixins";
 @import "./reset";
 @import "app-layout/profile-page/badge-list/badge-list.component";
 

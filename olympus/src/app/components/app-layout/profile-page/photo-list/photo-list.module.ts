@@ -3,6 +3,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
 import {PhotoListComponent} from './photo-list.component';
 import {PhotoModule} from '../photo/photo.module';
+import {ArticleCardModule} from '../../../../common/article-card/article-card.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import {PhotoModule} from '../photo/photo.module';
   imports: [
     BrowserModule,
     RouterModule,
-    PhotoModule
+    PhotoModule,
+    ArticleCardModule
   ],
   providers: [],
   exports: [PhotoListComponent]

@@ -1,6 +1,5 @@
-<article class="photos">
-  <h2 class="badge-list-title">Last Photos</h2>
-  <div class="photos-content">
+<app-article-card [title]="'Last Photos'">
+  <div card-body class="photos-content">
     <app-photo *ngFor="let photo of photos" [photo]="photo"></app-photo>
   </div>
-</article>
+</app-article-card>

@@ -1,5 +1,5 @@
-@import "../../shared-styles/variables";
-@import "../../shared-styles/mixins";
+@import "../../common/variables";
+@import "../../common/mixins";
 
 .register-information--form--info {
   @include button-style(register-information--form--info--register-button,
