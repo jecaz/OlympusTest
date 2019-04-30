@@ -53,7 +53,7 @@
   .notification-counter {
     position: absolute;
     border-radius: 50%;
-    font: 7px Verdana;
+    font: .7rem Verdana;
     color: $primary-color;
     opacity: 1;
   }
@@ -105,6 +105,18 @@
     color: $color-focus;
     box-shadow: 0 0 5px rgba(81, 203, 238, 1);
     border: 1px solid rgba(81, 203, 238, 1);
+  }
+}
+
+@mixin vote-icon($img-id) {
+  @for $i from 1 through length($position) {
+    //@debug $i;
+    img[id^=#{$img-id}#{$i}] {
+      left: nth($position, $i);
+      z-index: $i;
+      border: 2px solid $primary-color;
+      background-color: $primary-color;
+    }
   }
 }
 

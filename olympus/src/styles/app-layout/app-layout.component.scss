@@ -268,8 +268,9 @@
     width: $full-width - 8;
 
     &-container {
-      width: $full-width / 2 + 15;
       margin: 0 auto;
+      width: $full-width / 2 + 15;
+      min-width: 93rem;
     }
   }
 }

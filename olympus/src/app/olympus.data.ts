@@ -2,6 +2,7 @@ import {User} from './models/user.model';
 import {Badge} from './models/badge.model';
 import {PlayItem} from './models/play-item.model';
 import {Photo} from "./models/photo.model";
+import {ActorVote} from "./models/actor-vote.model";
 
 export const ACTIVE = '#2ADC89';
 export const AWAY = '#FFDF5C';
@@ -243,5 +244,49 @@ export const PHOTOS: Photo[] = [
   new Photo({
     id: 9,
     icon: '../../../../assets/images/last-photos/pool.jpg'
+  })
+];
+export const ACTOR_VOTERS: ActorVote[] = [
+  new ActorVote({
+    id: 1,
+    actor: 'Thomas Bale',
+    votePercentage: 62,
+    voters: [
+      '../../../../assets/images/users/user1.png',
+      '../../../../assets/images/users/user2.png',
+      '../../../../assets/images/users/user3.png',
+      '../../../../assets/images/users/user4.png',
+      '../../../../assets/images/users/user5.png',
+      '../../../../assets/images/users/user6.png',
+      '../../../../assets/images/users/user7.png',
+      '../../../../assets/images/users/user8.png',
+      '../../../../assets/images/users/user14.png',
+      '../../../../assets/images/users/user10.png',
+      '../../../../assets/images/users/user11.png',
+      '../../../../assets/images/users/user12.png'
+    ]
+  }),
+  new ActorVote({
+    id: 2,
+    actor: 'Ben Robertson',
+    votePercentage: 27,
+    voters: [
+      '../../../../assets/images/users/user7.png',
+      '../../../../assets/images/users/user15.png',
+      '../../../../assets/images/users/user14.png',
+      '../../../../assets/images/users/user4.png',
+      '../../../../assets/images/users/user10.png',
+      '../../../../assets/images/users/user11.png',
+      '../../../../assets/images/users/user12.png'
+    ]
+  }),
+  new ActorVote({
+    id: 3,
+    actor: 'Michael Streiton',
+    votePercentage: 11,
+    voters: [
+      '../../../../assets/images/users/user9.png',
+      '../../../../assets/images/users/user13.png'
+    ]
   })
 ];

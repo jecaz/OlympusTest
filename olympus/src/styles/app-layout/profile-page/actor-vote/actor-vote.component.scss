@@ -1,0 +1,53 @@
+@import "../../../shared-styles/variables";
+@import "../../../shared-styles/mixins";
+
+@include vote-icon(thomas);
+@include vote-icon(ben);
+@include vote-icon(michael);
+
+.vote {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+
+  &-radio-btn-label, &-percentage {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  &-radio-btn-label{
+    vertical-align: middle;
+  }
+
+  &-friends-number {
+    margin: .5rem 0 1.3rem 0;
+  }
+
+  &-friends-icons {
+    position: relative;
+    height: 3rem;
+
+    img {
+      position: absolute;
+      width: 3rem;
+      border-radius: 50%;
+    }
+
+    &-count {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      right: .6rem;
+      z-index: 12;
+      width: 3rem;
+      height: 3rem;
+      border: 2px solid $primary-color;
+      border-radius: 50%;
+      background-color: rgba(245, 65, 29, 0.8);
+      color: $primary-color;
+    }
+  }
+}
+
