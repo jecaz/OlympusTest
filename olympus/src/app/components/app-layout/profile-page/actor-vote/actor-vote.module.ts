@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
 import {ActorVoteComponent} from './actor-vote.component';
-import {ProgressBarModule} from '../progress-bar/progress-bar.module';
+import {ProgressBarModule} from '../../../../common/progress-bar/progress-bar.module';
 
 @NgModule({
   declarations: [
