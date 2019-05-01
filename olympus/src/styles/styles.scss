@@ -4,7 +4,7 @@
 @import "common/radio-button";
 @import "common/mixins";
 @import "./reset";
-@import "app-layout/profile-page/badge-list/badge-list.component";
+@import "app-layout/profile-page/badge-article/badge-list/badge-list.component";
 
 html {
   @include font-style(62.5%, 'Roboto');
