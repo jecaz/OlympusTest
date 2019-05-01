@@ -136,7 +136,7 @@
 
   &--left, &--right {
     display: inline-block;
-    width: $full-width / 4;
+    width: $full-width / 4 - 2;
     min-width: 23rem;
   }
 

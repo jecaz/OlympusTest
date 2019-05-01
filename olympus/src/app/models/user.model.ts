@@ -7,6 +7,7 @@ export class User {
   private _city?: string;
   private _country?: string;
   private _state?: string;
+  private posts?: string;
 
   constructor(obj?: any) {
     this._id = obj && obj.id;

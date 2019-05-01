@@ -40,12 +40,12 @@
         </nav>
         <div class="header-right--user-info">
           <span class="header-right--user-info-icon">
-            <img class="notification-container" src="../../../assets/images/users-profile-icon.png" alt="User icon">
+            <img class="notification-container" [src]="currentUser.profileIcon" alt="User icon">
             <span class="notification-counter notification-counter-user-state"></span>
           </span>
           <span class="header-right--user-info-name">
-            <span class="fulname">James Splegel</span><br>
-            <span class="nickname">Space cowboy</span>
+            <span class="fulname">{{currentUser.username}}</span><br>
+            <span class="nickname">{{currentUser.nickname}}</span>
           </span>
         </div>
       </div>

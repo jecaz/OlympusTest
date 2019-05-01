@@ -9,6 +9,8 @@
     position: absolute;
     right: 6.5rem;
     bottom: 0.5rem;
+    width: 3rem;
+    height: 3rem;
     box-shadow: 0 0 7px $shadow-color;
     border-radius: 50%;
     background-color: $app-primary-color;
@@ -19,7 +21,7 @@
 .header {
   position: fixed;
   width: $full-width;
-  z-index: 3;
+  z-index: 10;
   display: flex;
   height: 5rem;
   background: $app-header-bg-color;
@@ -30,20 +32,24 @@
     @include hover-btn-state($app-primary-color-hover);
     display: flex;
     justify-content: center;
-    width: $full-width - 96;
+    width: 5.3rem;
     min-width: 5.3rem;
     height: $full-height;
     background-color: $app-primary-color;
 
     a {
       align-self: center;
+
+      img {
+        vertical-align: middle;
+      }
     }
   }
 
   &-content {
     display: flex;
     justify-content: space-between;
-    width: $full-width - 4;
+    width: $full-width - 2;
 
     .header-left {
       display: flex;
@@ -65,6 +71,7 @@
           display: inline-block;
           position: relative;
           width: $full-width / 2;
+          max-width: 40rem;
           height: inherit;
 
           &::after {
@@ -95,14 +102,15 @@
 
 .header-right {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin-right: 5.3rem;
   width: $full-width / 5 * 2;
   height: $full-height;
-  padding-right: 1rem;
+  padding-right: .5rem;
 
   &-nav {
     display: inline-block;
+    margin-right: 5rem;
     width: $full-width / 5 * 3;
     height: $full-height;
 
@@ -165,6 +173,7 @@
         width: 3rem;
         border-radius: 50%;
         vertical-align: middle;
+        cursor: pointer;
       }
     }
 
@@ -188,7 +197,7 @@
   display: flex;
 
   .menu, .active-users {
-    width: 4%;
+    width: 5.3rem;
     min-width: 5.3rem;
     box-shadow: 0 0 7px $shadow-color;
     background-color: $sidebar-bg-color;
@@ -231,12 +240,17 @@
     }
 
     &-list-item {
-      @include nav-item-hover(left, left, right);
       padding: 1rem 0;
       text-align: center;
 
       &--user-icon {
         width: 3rem;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &:hover {
+          border: 1px solid $app-header-bg-color;
+        }
       }
     }
 
@@ -265,11 +279,12 @@
   .content-main {
     margin-top: 5rem;
     padding-top: 3rem;
-    width: $full-width - 8;
+    width: $full-width;
 
     &-container {
       margin: 0 auto;
-      width: $full-width / 2 + 15;
+      width: 1076px;
+      box-sizing: content-box;
       min-width: 93rem;
     }
   }

@@ -6,6 +6,7 @@ import {BadgeListModule} from './badge-list/badge-list.module';
 import {PlayListModule} from './play-list/play-list.module';
 import {PhotoListModule} from './photo-list/photo-list.module';
 import {ActorVoteListModule} from './actor-vote-list/actor-vote-list.module';
+import {PostListModule} from './post-list/post-list.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {ActorVoteListModule} from './actor-vote-list/actor-vote-list.module';
     BadgeListModule,
     PlayListModule,
     PhotoListModule,
-    ActorVoteListModule
+    ActorVoteListModule,
+    PostListModule
   ],
   providers: [],
   exports: [ProfilePageComponent]

@@ -6,7 +6,7 @@
   top: 0;
   left: 0;
   width: $full-width;
-  height: $full-height;
+  height: 100vh;
   background-color: $layout-bg-color;
 }
 
@@ -199,9 +199,9 @@
 }
 
 @include responsive-below(lg) {
-  .layer {
-    height: auto;
-  }
+  //.layer {
+  //  height: auto;
+  //}
 
   .layout-container {
     width: $full-width - 2;

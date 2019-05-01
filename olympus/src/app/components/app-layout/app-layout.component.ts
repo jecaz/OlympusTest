@@ -10,17 +10,18 @@ import {UserService} from '../../services/user.service';
 export class AppLayoutComponent implements OnInit, OnDestroy {
   @ViewChild('backToTop') sectionNeedToScroll: ElementRef;
   users: User[];
+  currentUser: User;
 
   constructor(private userService: UserService, private renderer: Renderer2) {
     this.renderer.addClass(document.body, 'background-layout');
   }
 
   ngOnInit() {
+    this.currentUser = this.userService.getLoggedUser();
     this.users = this.userService.getActiveUsers();
   }
 
   ngOnDestroy() {
-    // this.renderer.removeClass(document.body, 'background-layout');
   }
 
   public goToSection() {

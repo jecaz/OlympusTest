@@ -1,8 +1,9 @@
 import {User} from './models/user.model';
 import {Badge} from './models/badge.model';
 import {PlayItem} from './models/play-item.model';
-import {Photo} from "./models/photo.model";
-import {ActorVote} from "./models/actor-vote.model";
+import {Photo} from './models/photo.model';
+import {ActorVote} from './models/actor-vote.model';
+import {Post} from './models/post.model';
 
 export const ACTIVE = '#2ADC89';
 export const AWAY = '#FFDF5C';
@@ -20,9 +21,9 @@ export const ACTIVE_USERS: User[] = [
   }),
   new User({
     id: 2,
-    username: 'Marija',
+    username: 'Diana Jameson',
     nickname: null,
-    profileIcon: '../../../assets/images/active-user-profile/avatar2.png',
+    profileIcon: '../../../assets/images/users/user4.png',
     city: null,
     country: null,
     state: ACTIVE
@@ -288,5 +289,96 @@ export const ACTOR_VOTERS: ActorVote[] = [
       '../../../../assets/images/users/user9.png',
       '../../../../assets/images/users/user13.png'
     ]
+  })
+];
+export const LOGGED_USER: User = new User({
+  id: 1,
+  username: 'James Splegel',
+  nickname: 'Space cowboy',
+  profileIcon: '../../../../assets/images/users-profile-icon.png',
+  city: 'San Francisco',
+  country: 'CA',
+  state: ACTIVE
+});
+export const POSTS: Post[] = [
+  new Post({
+    id: 1,
+    upperId: 0,
+    userId: 1,
+    timeAgo: 19,
+    userProfileIcon: '../../../../assets/images/users-profile-icon.png',
+    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla ' +
+    'pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est ' +
+    'laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accunsantium doloremque.',
+    badges: [
+      'fas fa-trophy',
+      'far fa-heart',
+      'far fa-comment-alt',
+      'fas fa-retweet',
+    ],
+    likes: [
+      {name: 'Jenny', icon: '../../../../assets/images/users/user1.png'},
+      {name: 'Robert', icon: '../../../../assets/images/users/user2.png'},
+      {name: 'Robert', icon: '../../../../assets/images/users/user3.png'},
+      {name: 'Robert', icon: '../../../../assets/images/users/user4.png'},
+      {name: 'Robert', icon: '../../../../assets/images/users/user5.png'},
+      {name: 'Robert', icon: '../../../../assets/images/users/user6.png'},
+      {name: 'Robert', icon: '../../../../assets/images/users/user7.png'},
+      {name: 'Robert', icon: '../../../../assets/images/users/user8.png'}
+    ],
+    message: 17,
+    reply: 24
+  }),
+  new Post({
+    id: 2,
+    upperId: 0,
+    userId: 1,
+    timeAgo: 7,
+    userProfileIcon: '../../../../assets/images/users-profile-icon.png',
+    description: 'Hi! Everyone should check out these amazing photographs that my friend shot the past week. Here\'s ' +
+    'one of them...leave a kind comment!',
+    badges: [
+      'far fa-heart',
+      'far fa-comment-alt',
+      'fas fa-retweet',
+    ],
+    sharedPost: new Post({
+      id: 3,
+      upperId: 2,
+      userId: 2,
+      timeAgo: 16,
+      userProfileIcon: '../../../assets/images/users/user8.png',
+      postImage: '../../../../assets/images/post-icon/night2.jpg',
+      description: 'Here\'s the first photo of out incredible photoshoot from yesterday. If you like it please say so ' +
+      'and tel me what you wanna see next!',
+      likes: [
+        {name: 'Diana', icon: '../../../../assets/images/users/user9.png'},
+        {name: 'Nicholas', icon: '../../../../assets/images/users/user13.png'},
+        {name: 'Robert', icon: '../../../../assets/images/users/user1.png'},
+        {name: 'Robert', icon: '../../../../assets/images/users/user2.png'},
+        {name: 'Robert', icon: '../../../../assets/images/users/user3.png'},
+        {name: 'Robert', icon: '../../../../assets/images/users/user4.png'},
+        {name: 'Robert', icon: '../../../../assets/images/users/user5.png'},
+        {name: 'Robert', icon: '../../../../assets/images/users/user6.png'},
+        {name: 'Robert', icon: '../../../../assets/images/users/user7.png'},
+        {name: 'Robert', icon: '../../../../assets/images/users/user8.png'},
+        {name: 'Robert', icon: '../../../../assets/images/users/user14.png'},
+        {name: 'Robert', icon: '../../../../assets/images/users/user10.png'},
+        {name: 'Robert', icon: '../../../../assets/images/users/user11.png'},
+        {name: 'Robert', icon: '../../../../assets/images/users/user12.png'},
+        {name: 'Robert', icon: '../../../../assets/images/users/user7.png'}
+      ],
+      message: 0,
+      reply: 16
+    })
+  }),
+  new Post({
+    id: 4,
+    upperId: 0,
+    userId: 2,
+    timeAgo: 19,
+    description: 'You must have chaos within you to give birth to a dancing star. ~ Friedrich Nietzsche',
+    message: 17,
+    reply: 24
   })
 ];

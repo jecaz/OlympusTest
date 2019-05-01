@@ -3,7 +3,7 @@ export class Badge {
   private _id: number;
   private _name: string;
   private _icon: string;
-  private _notification: number;
+  private _notification?: number;
 
   constructor(obj?: any) {
     this._id = obj && obj.id;

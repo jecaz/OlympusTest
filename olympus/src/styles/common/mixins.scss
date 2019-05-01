@@ -120,6 +120,18 @@
   }
 }
 
+@mixin friends-icon() {
+  position: relative;
+  height: 2.5rem;
+
+  img {
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+  }
+}
+
 @mixin responsive-below($breakpoint) {
 
   // If the breakpoint exists in the map.

@@ -25,22 +25,14 @@
   }
 
   &-friends-icons {
-    position: relative;
-    height: 3rem;
-
-    img {
-      position: absolute;
-      width: 2.5rem;
-      height: 2.5rem;
-      border-radius: 50%;
-    }
+    @include friends-icon();
 
     &-count {
       display: flex;
       justify-content: center;
       align-items: center;
       position: absolute;
-      right: 4.5rem;
+      left: 11.8rem;
       z-index: 12;
       width: 2.5rem;
       height: 2.5rem;

@@ -14,11 +14,12 @@ const appRoutes: Routes = [
       { path: 'register', component: RegisterComponent },
       { path: 'login', component: LoginComponent }
     ]},
-  {path: 'app', component: AppLayoutComponent,
+  {path: '', component: AppLayoutComponent,
     children: [
       { path: '', redirectTo: 'profile', pathMatch: 'full' },
       { path: 'profile', component: ProfilePageComponent }
-    ]},
+    ]
+  },
   {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 @NgModule({

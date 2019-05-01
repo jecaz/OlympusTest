@@ -6,18 +6,18 @@
     <div class="user-section">
       <div class="user-section-content">
         <a class="user-icon">
-          <img src="../../../../assets/images/users-profile-icon.png" alt="Profile picture">
+          <img [src]="currentUser.profileIcon" alt="Profile picture">
         </a>
         <a class="user-name">
-          <span class="user-name--full">James Spiegel</span><br>
-          <span class="user-name--city">San Francisco, CA</span>
+          <span class="user-name--full">{{currentUser.username}}</span><br>
+          <span class="user-name--city">{{currentUser.city}}, {{currentUser.country}}</span>
         </a>
       </div>
     </div>
     <div class="profile-navbar">
       <ul class="row profile-navbar-list">
         <li class="col profile-navbar-list-item">
-          <a routerLink="/app/profile"
+          <a routerLink="/profile/timeline"
              routerLinkActive="active-link"
              [routerLinkActiveOptions]="{exact: true}">Timeline</a>
         </li>
@@ -56,7 +56,7 @@
     </div>
   </div>
   <div class="profile-section--middle">
-    <div class="card">Posts</div>
+    <app-post-list></app-post-list>
   </div>
   <div class="profile-section--right">
     <div class="card">
