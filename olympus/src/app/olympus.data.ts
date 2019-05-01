@@ -14,7 +14,7 @@ export const ACTIVE_USERS: User[] = [
     id: 1,
     username: 'Marko',
     nickname: null,
-    profileIcon: '../../../assets/images/active-user-profile/avatar1.png',
+    profileIcon: '../../../../assets/images/users/user4.png',
     city: null,
     country: null,
     state: ACTIVE
@@ -23,7 +23,7 @@ export const ACTIVE_USERS: User[] = [
     id: 2,
     username: 'Diana Jameson',
     nickname: null,
-    profileIcon: '../../../assets/images/users/user4.png',
+    profileIcon: '../../../assets/images/users/user8.png',
     city: null,
     country: null,
     state: ACTIVE
@@ -32,7 +32,7 @@ export const ACTIVE_USERS: User[] = [
     id: 3,
     username: 'Petar',
     nickname: null,
-    profileIcon: '../../../assets/images/active-user-profile/avatar3.png',
+    profileIcon: '../../../assets/images/users/user3.png',
     city: null,
     country: null,
     state: ACTIVE
@@ -41,7 +41,7 @@ export const ACTIVE_USERS: User[] = [
     id: 4,
     username: 'Dejan',
     nickname: null,
-    profileIcon: '../../../assets/images/active-user-profile/avatar4.png',
+    profileIcon: '../../../assets/images/users/user2.png',
     city: null,
     country: null,
     state: AWAY
@@ -50,7 +50,7 @@ export const ACTIVE_USERS: User[] = [
     id: 5,
     username: 'Jelena',
     nickname: null,
-    profileIcon: '../../../assets/images/active-user-profile/avatar5.png',
+    profileIcon: '../../../assets/images/users/user1.png',
     city: null,
     country: null,
     state: DO_N0T_DISTURB
@@ -59,16 +59,16 @@ export const ACTIVE_USERS: User[] = [
     id: 6,
     username: 'Nikolina',
     nickname: null,
-    profileIcon: '../../../assets/images/active-user-profile/avatar6.png',
+    profileIcon: '../../../assets/images/users/user5.png',
     city: null,
     country: null,
     state: ACTIVE
   }),
   new User({
     id: 7,
-    username: 'Biljana',
+    username: 'Milos',
     nickname: null,
-    profileIcon: '../../../assets/images/active-user-profile/avatar7.png',
+    profileIcon: '../../../assets/images/users/user7.png',
     city: null,
     country: null,
     state: ACTIVE
@@ -77,16 +77,16 @@ export const ACTIVE_USERS: User[] = [
     id: 8,
     username: 'Nenad',
     nickname: null,
-    profileIcon: '../../../assets/images/active-user-profile/avatar8.png',
+    profileIcon: '../../../assets/images/users/user6.png',
     city: null,
     country: null,
     state: AWAY
   }),
   new User({
     id: 9,
-    username: 'Anonymous',
+    username: 'Sara',
     nickname: null,
-    profileIcon: '../../../assets/images/active-user-profile/avatar9.png',
+    profileIcon: '../../../assets/images/users/user12.png',
     city: null,
     country: null,
     state: INVISIBLE
@@ -95,16 +95,16 @@ export const ACTIVE_USERS: User[] = [
     id: 10,
     username: 'Nenad',
     nickname: null,
-    profileIcon: '../../../assets/images/active-user-profile/avatar8.png',
+    profileIcon: '../../../assets/images/users/user6.png',
     city: null,
     country: null,
     state: AWAY
   }),
   new User({
     id: 11,
-    username: 'Biljana',
+    username: 'Milos',
     nickname: null,
-    profileIcon: '../../../assets/images/active-user-profile/avatar7.png',
+    profileIcon: '../../../assets/images/users/user7.png',
     city: null,
     country: null,
     state: ACTIVE
