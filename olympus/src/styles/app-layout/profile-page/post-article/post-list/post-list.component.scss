@@ -1,4 +1,5 @@
 @import "../../../../common/variables";
+@import "../../../../common/mixins";
 
 .page-button {
   margin: 3rem auto 0 auto;
@@ -16,5 +17,11 @@
     &-icon {
       zoom: .8;
     }
+  }
+}
+
+@include responsive-below(sm) {
+  .page-button {
+    display: none;
   }
 }

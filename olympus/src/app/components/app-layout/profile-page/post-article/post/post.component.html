@@ -1,6 +1,8 @@
 <div *ngIf="post" class="post" [ngClass]="{'indent-main-post': !post?.sharedPost, 'indent-sub-post': post?.sharedPost}">
   <div>
-    <div class="post-badges" [ngStyle]="{'right': post.sharedPost ? '-13px' : '-33px'}">
+    <!--[ngStyle]="{'right': post.sharedPost ? '-13px' : '-33px'}"-->
+    <div class="post-badges"
+         [class.shared-post-badges]="post.sharedPost">
       <ng-container *ngFor="let badge of post.badges">
         <span class="post-badges-icon">
           <i class="{{badge}}" [style.zoom]=".9"></i>
@@ -29,22 +31,26 @@
             <span class="post-header-meta-user-time">{{post?.timeAgo}} hours ago</span>
           </h3>
         </div>
-        <button class="dot-icon">
+        <button class="dot-icon" [class.shared-dot-icon]="post?.sharedPost?.postUsername">
           <i class="fas fa-ellipsis-h"></i>
         </button>
       </div>
-      <div [ngClass]="{'sharedPostBodyStyle' : post.postUsername !== currentUser?.username }" class="post-body">
+      <div [ngClass]="{'sharedPostBodyStyle' : post.postUsername !== currentUser?.username }"
+           [class.shared-post-body]="post?.sharedPost?.postUsername"
+           class="post-body">
         <p>{{post.description}}</p>
       </div>
     </div>
   </div>
-  <div *ngIf="post.sharedPost">
+  <div *ngIf="post.sharedPost" id="subpost">
     <app-post #subpost [post]="post.sharedPost"></app-post>
   </div>
   <div *ngIf="post.likes" class="post-likes">
     <div class="post-likes-friends">
-      <span class="post-likes-friends-heart-icon"><i class="far fa-heart"></i></span>
-      <span class="post-likes-friends-heart-count">{{post?.likes?.length}}</span>
+      <span style="display: flex; align-items: center;">
+        <span class="post-likes-friends-heart-icon"><i class="far fa-heart"></i></span>
+        <span class="post-likes-friends-heart-count">{{post?.likes?.length}}</span>
+      </span>
       <div class="post-likes-friends-icons">
         <ng-container *ngFor="let like of post.likes; let i = index">
           <img *ngIf="i < 5" [src]="like.icon" alt="User icon" id="{{'like1' + (i + 1)}}">

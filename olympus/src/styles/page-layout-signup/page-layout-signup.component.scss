@@ -12,7 +12,8 @@
 
 .layout-container {
   margin: 3rem auto 0 auto;
-  width: $full-width / 5 * 3;
+  width: $full-width / 5 * 3 + 4;
+  max-width: 93.5rem;
 }
 
 .layout-header {
@@ -74,6 +75,7 @@
 .layout-content {
   display: flex;
   justify-content: space-between;
+  padding-top: 3rem;
 
   &--introduction {
     margin-right: 2rem;
@@ -119,7 +121,7 @@
 
   &-information {
     display: flex;
-    margin-right: $margin * 4;
+    margin-right: $margin * 6;
     width: $full-width / 2 - 6;
     max-width: 44.4rem;
     min-width: 34.6rem;
@@ -148,7 +150,6 @@
       }
 
       &--turn-off {
-
         .fa-power-off {
           color: $red-color;
         }
@@ -199,9 +200,9 @@
 }
 
 @include responsive-below(lg) {
-  //.layer {
-  //  height: auto;
-  //}
+  .layer {
+    height: auto;
+  }
 
   .layout-container {
     width: $full-width - 2;
@@ -214,6 +215,7 @@
   .layout-content {
     width: $full-width / 2;
     margin: 0 auto;
+    padding-top: 0;
     flex-direction: column;
 
     &--introduction, &-information {
@@ -283,7 +285,6 @@
 
 @include responsive-below(xs) {
   .layout-content--introduction--title {
-
     br {
       display: none;
     }

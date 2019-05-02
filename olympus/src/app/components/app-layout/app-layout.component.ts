@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild} from '@angular/core';
+import {Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
 import {User} from '../../models/user.model';
 import {UserService} from '../../services/user.service';
 
@@ -7,7 +7,7 @@ import {UserService} from '../../services/user.service';
   templateUrl: './app-layout.component.html',
   styleUrls: ['../../../styles/app-layout/app-layout.component.scss']
 })
-export class AppLayoutComponent implements OnInit, OnDestroy {
+export class AppLayoutComponent implements OnInit {
   @ViewChild('backToTop') sectionNeedToScroll: ElementRef;
   users: User[];
   currentUser: User;
@@ -19,9 +19,6 @@ export class AppLayoutComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.currentUser = this.userService.getLoggedUser();
     this.users = this.userService.getActiveUsers();
-  }
-
-  ngOnDestroy() {
   }
 
   public goToSection() {

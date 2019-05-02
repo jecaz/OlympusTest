@@ -11,6 +11,7 @@
     position: absolute;
     display: flex;
     flex-direction: column;
+    right: -3.3rem;
 
     &-icon {
       display: flex;
@@ -24,6 +25,10 @@
       color: white;
       cursor: pointer;
     }
+  }
+
+  .shared-post-badges {
+    right: -1.3rem;
   }
 
   &-cover-img {
@@ -54,7 +59,6 @@
     }
 
     &-meta {
-
       &-icon {
         width: 3.5rem;
         border-radius: 50%;
@@ -176,4 +180,43 @@
 .sharedPostStyle {
   position: relative;
   padding-top: 2rem;
+}
+
+@include responsive-below(sm) {
+  .post {
+    &-badges {
+      right: 0;
+      flex-direction: row;
+      top: -3.1rem;
+
+      &-icon {
+        margin: 0 .2rem;
+      }
+    }
+
+    .shared-post-badges {
+      right: 2rem;
+    }
+
+    &-likes {
+      flex-direction: column;
+
+      &-friends {
+        flex-direction: column;
+        align-items: flex-start;
+
+        &-icons {
+          margin: 1rem 0 1.5rem 0;
+        }
+
+        &-names {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  #subpost, .shared-post-body, .shared-dot-icon {
+    display: none;
+  }
 }

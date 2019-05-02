@@ -138,7 +138,7 @@ export const BADGES: Badge[] = [
   new Badge({
     id: 5,
     name: 'friend',
-    icon: '../../../../assets/images/active-user-profile/avatar8.png',
+    icon: '../../../../assets/images/badge-icons/avatar8.png',
     notification: 0
   }),
   new Badge({

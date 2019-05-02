@@ -7,7 +7,6 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['../../../../styles/page-layout-signup/login/login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
   user: FormGroup;
 
   constructor() { }

@@ -15,12 +15,4 @@ export class ProfilePageComponent implements OnInit {
   ngOnInit() {
     this.currentUser = this.userService.getLoggedUser();
   }
-
-  clickLi() {
-    console.log('li click');
-  }
-
-  cliskSpan() {
-    console.log('user name clicked');
-  }
 }

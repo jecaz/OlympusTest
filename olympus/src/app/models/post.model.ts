@@ -73,7 +73,6 @@ export class Post {
     this._userProfileIcon = value;
   }
 
-
   get timeAgo(): number {
     return this._timeAgo;
   }

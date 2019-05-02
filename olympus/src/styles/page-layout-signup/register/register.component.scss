@@ -92,7 +92,6 @@
 }
 
 @include responsive-below(lg) {
-
   .signup-input-gender::after {
     display: none;
   }

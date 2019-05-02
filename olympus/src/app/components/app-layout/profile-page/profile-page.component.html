@@ -1,6 +1,6 @@
 <div class="profile">
   <div class="profile-cover">
-    <img src="../../../../assets/images/sunset.jpg" alt="Cover picture" style="width: 100%;height: inherit;object-fit: cover;">
+    <img class="profile-cover-img" src="../../../../assets/images/sunset.jpg" alt="Cover picture">
   </div>
   <div class="profile-cover-container">
     <div class="user-section">
@@ -17,7 +17,7 @@
     <div class="profile-navbar">
       <ul class="row profile-navbar-list">
         <li class="col profile-navbar-list-item">
-          <a routerLink="/profile/timeline"
+          <a routerLink="/profile"
              routerLinkActive="active-link"
              [routerLinkActiveOptions]="{exact: true}">Timeline</a>
         </li>
@@ -27,7 +27,7 @@
         <li class="col profile-navbar-list-item">
           <a routerLink="#" routerLinkActive="active-link">Friends</a>
         </li>
-        <li class="col profile-navbar-list-item"></li>
+        <li class="col profile-navbar-list-item spacer"></li>
         <li class="col profile-navbar-list-item">
           <a routerLink="#" routerLinkActive="active-link">Photos</a>
         </li>
@@ -48,7 +48,7 @@
 </div>
 <section class="profile-section">
   <div class="profile-section--left">
-    <div class="card badges-article">
+    <div class="card badges-card">
       <app-badge-list></app-badge-list>
     </div>
     <div class="card">
@@ -59,7 +59,7 @@
     <app-post-list></app-post-list>
   </div>
   <div class="profile-section--right">
-    <div class="card">
+    <div class="card photos-card">
       <app-photo-list></app-photo-list>
     </div>
     <div class="card">
