@@ -153,12 +153,6 @@
   font-weight: $font-weight-basic;
 }
 
-@include responsive-below(lg) {
-  .badges-card, .photos-card {
-    max-width: 24rem;
-  }
-}
-
 @include responsive-below(md) {
   .profile {
     &-section {
