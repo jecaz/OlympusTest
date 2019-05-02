@@ -125,7 +125,7 @@
     width: $full-width / 2 - 6;
     max-width: 44.4rem;
     min-width: 34.6rem;
-    min-height: 53rem;
+    min-height: 52rem;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     background: $primary-color;
@@ -230,7 +230,7 @@
     &-information {
       flex-direction: column;
       align-self: center;
-      margin-top: 2rem;
+      margin-top: 3.5rem;
       margin-bottom: 6rem;
       max-width: none;
 
@@ -265,7 +265,7 @@
 
 @include responsive-below(md) {
   .layout-content {
-    width: $full-width - 30;
+    width: $full-width - 40;
 
     &--introduction--title {
       font-size: 2.1rem;
@@ -274,6 +274,10 @@
 }
 
 @include responsive-below(sm) {
+
+}
+
+@include responsive-below(xs) {
   .layout-content {
     width: $full-width - 2;
 
@@ -281,9 +285,7 @@
       min-width: inherit;
     }
   }
-}
 
-@include responsive-below(xs) {
   .layout-content--introduction--title {
     br {
       display: none;
