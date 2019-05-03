@@ -63,7 +63,7 @@ $badge-notification-secondary-color: $red;
 $badge-notification-third-color: #33ffff;
 
 // Vote
-$position: 0px, 13px, 26px, 39px, 52px, 65px, 78px, 92px, 105px, 118px;
+$position: 0, 1.3rem, 2.6rem, 3.9rem, 5.2rem, 6.5rem, 7.8rem, 9.2rem, 10.5rem, 11.8rem;
 
 // Post
 $post-primary-color: #A4A1A0;
@@ -80,8 +80,8 @@ $layout-bg-color-hover: rgba(247, 106, 63, 0.5);
 $layout-font-color-primary: #ffffff;
 
 $breakpoints: (
-  xs: 576px,
-  sm: 768px,
-  md: 992px,
-  lg: 1200px
+  xs: 36em,
+  sm: 48em,
+  md: 62em,
+  lg: 75em
 );

@@ -16,7 +16,7 @@
     position: absolute;
     right: 0;
     top: 30%;
-    margin-right: 15px;
+    margin-right: 1.5rem;
     font-family: "Font Awesome 5 Free";
     content: $icon;
     font-weight: 900;
@@ -103,8 +103,8 @@
   &:focus {
     background-color: $bg-color-focus;
     color: $color-focus;
-    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-    border: 1px solid rgba(81, 203, 238, 1);
+    box-shadow: 0 0 .5rem rgba(81, 203, 238, 1);
+    border: .1rem solid rgba(81, 203, 238, 1);
   }
 }
 
@@ -114,7 +114,7 @@
     img[id^=#{$img-id}#{$i}] {
       left: nth($position, $i);
       z-index: $i;
-      border: 2px solid $primary-color;
+      border: .2rem solid $primary-color;
       background-color: $primary-color;
     }
   }

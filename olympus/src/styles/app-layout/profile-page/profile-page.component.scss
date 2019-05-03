@@ -4,7 +4,7 @@
 .profile {
   padding: 1.2rem 1.2rem 0;
   position: relative;
-  box-shadow: 0 0 7px $shadow-color;
+  box-shadow: 0 0 .7rem $shadow-color;
   background-color: $primary-color;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
@@ -43,7 +43,7 @@
           cursor: pointer;
 
           img {
-            border: 3px solid $primary-color;
+            border: .3rem solid $primary-color;
             margin: -5.8rem auto 0;
             width: 7.2rem;
             height: 7.2rem;
@@ -135,6 +135,7 @@
 .profile-section {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10rem;
 
   &--left, &--right {
     display: inline-block;
@@ -151,6 +152,14 @@
 
 .active-link {
   font-weight: $font-weight-basic;
+}
+
+@include responsive-below(lg) {
+  .profile {
+    &-section {
+      margin-bottom: 0;
+    }
+  }
 }
 
 @include responsive-below(md) {
@@ -216,11 +225,11 @@
           }
 
           &-item:nth-last-child(3) {
-            margin-left: 2px;
+            margin-left: .2rem;
           }
 
           &-item:nth-last-child(-n+2) {
-            margin-left: 8px;
+            margin-left: .8rem;
           }
 
           .spacer {

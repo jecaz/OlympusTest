@@ -42,7 +42,7 @@
 
 .signup-input, .signup-input-birthday, .signup-input-gender {
   margin: .5rem 0;
-  border: 1px solid $border-color;
+  border: .1rem solid $border-color;
   border-radius: 3px;
 }
 
@@ -64,8 +64,8 @@
   font-size: 1.4rem;
 
   &:focus-within {
-    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-    border: 1px solid rgba(81, 203, 238, 1);
+    box-shadow: 0 0 .5rem rgba(81, 203, 238, 1);
+    border: .1rem solid rgba(81, 203, 238, 1);
   }
 
   input {

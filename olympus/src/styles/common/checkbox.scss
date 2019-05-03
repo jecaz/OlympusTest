@@ -12,20 +12,20 @@
 
 .checkbox-custom + .checkbox-custom-label:before {
   display: inline-block;
-  margin-right: 5px;
-  padding: 2px;
-  width: 23px;
-  height: 23px;
+  margin-right: .5rem;
+  padding: .2rem;
+  width: 2.3rem;
+  height: 2.3rem;
   content: '';
   background: $checkbox-bg-color;
-  border: 2px solid $checkbox-border-color;
+  border: .2rem solid $checkbox-border-color;
   vertical-align: middle;
   text-align: center;
 }
 
 .checkbox-custom:checked + .checkbox-custom-label:before {
-  width: 23px;
-  height: 23px;
+  width: 2.3rem;
+  height: 2.3rem;
   color: $red-color;
   content: "\f00c";
   font-family: 'Font Awesome 5 Free';
