@@ -3,11 +3,11 @@ import {Photo} from '../../../../../models/photo.model';
 import {PhotoService} from '../../../../../services/photo.service';
 
 @Component({
-  selector: 'app-photo-list',
-  templateUrl: './photo-list.component.html',
-  styleUrls: ['../../../../../../styles/app-layout/profile-page/last-photos-article/photo-list/photo-list.component.scss']
+  selector: 'app-photos',
+  templateUrl: './photos.component.html',
+  styleUrls: ['../../../../../../styles/app-layout/profile-page/last-photos-article/photos/photos.component.scss']
 })
-export class PhotoListComponent implements OnInit {
+export class PhotosComponent implements OnInit {
   photos: Photo[];
 
   constructor(private photoService: PhotoService) { }

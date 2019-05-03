@@ -1,22 +1,22 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
-import {BadgeListComponent} from './badge-list.component';
-import {BadgeModule} from '../badge/badge.module';
+import {PlayItemsComponent} from './play-items.component';
+import {PlayItemModule} from '../play-item/play-item.module';
 import {ArticleCardModule} from '../../../../../common/article-card/article-card.module';
 
 @NgModule({
   declarations: [
-    BadgeListComponent
+    PlayItemsComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
-    BadgeModule,
+    PlayItemModule,
     ArticleCardModule
   ],
   providers: [],
-  exports: [BadgeListComponent]
+  exports: [PlayItemsComponent]
 })
-export class BadgeListModule {
+export class PlayItemsModule {
 }

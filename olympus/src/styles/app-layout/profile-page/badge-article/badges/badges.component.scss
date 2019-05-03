@@ -1,7 +1,7 @@
 @import "../../../../common/variables";
 @import "../../../../common/mixins";
 
-.badge-list-content {
+.badges-content {
   display: grid;
   grid-template-columns: 4.2rem 4.2rem 4.2rem 4.2rem 4.2rem;
   grid-template-rows: 4.5rem 3.5rem;
@@ -10,7 +10,7 @@
 }
 
 @include responsive-below(lg) {
-  .badge-list-content {
+  .badges-content {
     grid-template-columns: 4rem 4rem 4rem 4rem 4rem;
     padding-left: 1.5rem;
     grid-column-gap: .4rem;

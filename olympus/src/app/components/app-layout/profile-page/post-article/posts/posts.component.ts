@@ -5,11 +5,11 @@ import {PostService} from '../../../../../services/post.service';
 import {UserService} from '../../../../../services/user.service';
 
 @Component({
-  selector: 'app-post-list',
-  templateUrl: './post-list.component.html',
-  styleUrls: ['../../../../../../styles/app-layout/profile-page/post-article/post-list/post-list.component.scss']
+  selector: 'app-posts',
+  templateUrl: './posts.component.html',
+  styleUrls: ['../../../../../../styles/app-layout/profile-page/post-article/posts/posts.component.scss']
 })
-export class PostListComponent implements OnInit {
+export class PostsComponent implements OnInit {
   currentUser: User;
   posts: Post[];
 

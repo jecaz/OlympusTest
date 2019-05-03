@@ -1,22 +1,22 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
-import {PhotoListComponent} from './photo-list.component';
-import {PhotoModule} from '../photo/photo.module';
+import {ActorVotesComponent} from './actor-votes.component';
+import {ActorVoteModule} from '../actor-vote/actor-vote.module';
 import {ArticleCardModule} from '../../../../../common/article-card/article-card.module';
 
 @NgModule({
   declarations: [
-    PhotoListComponent
+    ActorVotesComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
-    PhotoModule,
+    ActorVoteModule,
     ArticleCardModule
   ],
   providers: [],
-  exports: [PhotoListComponent]
+  exports: [ActorVotesComponent]
 })
-export class PhotoListModule {
+export class ActorVotesModule {
 }

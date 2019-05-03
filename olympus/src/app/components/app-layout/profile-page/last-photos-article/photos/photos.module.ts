@@ -1,22 +1,22 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
+import {PhotosComponent} from './photos.component';
+import {PhotoModule} from '../photo/photo.module';
 import {ArticleCardModule} from '../../../../../common/article-card/article-card.module';
-import {PostListComponent} from './post-list.component';
-import {PostModule} from '../post/post.module';
 
 @NgModule({
   declarations: [
-    PostListComponent
+    PhotosComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
-    PostModule,
+    PhotoModule,
     ArticleCardModule
   ],
   providers: [],
-  exports: [PostListComponent]
+  exports: [PhotosComponent]
 })
- export class PostListModule {
+export class PhotosModule {
 }

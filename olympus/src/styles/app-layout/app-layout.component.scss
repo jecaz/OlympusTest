@@ -147,7 +147,7 @@
   &--user-info {
     @include input-icon("\f078");
     @include notification-container();
-    @include notification-counter(user-state, 3.2rem, 0rem, .6rem, .6rem, .25rem .2rem, $active-user-state-color);
+    @include notification-counter(user-state, 3.7rem, 0rem, .6rem, .6rem, .25rem .2rem, $active-user-state-color);
     display: inline-block;
     position: relative;
     padding-right: 2.5rem;
@@ -245,7 +245,7 @@
 
     &-list {
       @include notification-container();
-      @include notification-counter(user, 3.6rem, 1.5rem, .6rem, .6rem, .25rem .2rem);
+      @include notification-counter(user, 3.8rem, 1.5rem, .6rem, .6rem, .25rem .2rem);
 
       .notification-counter {
         border: .1rem solid $primary-color;

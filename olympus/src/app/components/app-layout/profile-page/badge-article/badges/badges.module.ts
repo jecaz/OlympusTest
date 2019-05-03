@@ -1,22 +1,22 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
-import {ActorVoteListComponent} from './actor-vote-list.component';
-import {ActorVoteModule} from '../actor-vote/actor-vote.module';
+import {BadgesComponent} from './badges.component';
+import {BadgeModule} from '../badge/badge.module';
 import {ArticleCardModule} from '../../../../../common/article-card/article-card.module';
 
 @NgModule({
   declarations: [
-    ActorVoteListComponent
+    BadgesComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
-    ActorVoteModule,
+    BadgeModule,
     ArticleCardModule
   ],
   providers: [],
-  exports: [ActorVoteListComponent]
+  exports: [BadgesComponent]
 })
-export class ActorVoteListModule {
+export class BadgesModule {
 }

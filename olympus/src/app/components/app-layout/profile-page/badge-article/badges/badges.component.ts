@@ -3,11 +3,11 @@ import {Badge} from '../../../../../models/badge.model';
 import {BadgeService} from '../../../../../services/badge.service';
 
 @Component({
-  selector: 'app-badge-list',
-  templateUrl: './badge-list.component.html',
-  styleUrls: ['../../../../../../styles/app-layout/profile-page/badge-article/badge-list/badge-list.component.scss']
+  selector: 'app-badges',
+  templateUrl: './badges.component.html',
+  styleUrls: ['../../../../../../styles/app-layout/profile-page/badge-article/badges/badges.component.scss']
 })
-export class BadgeListComponent implements OnInit {
+export class BadgesComponent implements OnInit {
   badges: Badge[];
 
   constructor(private badgeService: BadgeService) { }
