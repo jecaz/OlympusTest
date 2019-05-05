@@ -349,8 +349,8 @@ export const POSTS: Post[] = [
       timeAgo: 16,
       userProfileIcon: '../../../assets/images/users/user8.png',
       postImage: '../../../../assets/images/post-icon/night2.jpg',
-      description: 'Here\'s the first photo of out incredible photoshoot from yesterday. If you like it please say so ' +
-      'and tel me what you wanna see next!',
+      description: 'Here\'s the first photo of our incredible photoshoot from yesterday. If you like it please say so ' +
+      'and tell me what you wanna see next!',
       likes: [
         {name: 'Diana', icon: '../../../../assets/images/users/user9.png'},
         {name: 'Nicholas', icon: '../../../../assets/images/users/user13.png'},
